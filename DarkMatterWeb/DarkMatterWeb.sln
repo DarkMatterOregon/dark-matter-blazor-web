@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkMatterWeb", "DarkMatterWeb.csproj", "{E0B783CC-E252-428A-9B00-76634F880995}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0B783CC-E252-428A-9B00-76634F880995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0B783CC-E252-428A-9B00-76634F880995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0B783CC-E252-428A-9B00-76634F880995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0B783CC-E252-428A-9B00-76634F880995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28EA8F78-03E4-4E4C-986F-6D606B4098DD}
+	EndGlobalSection
+EndGlobal
