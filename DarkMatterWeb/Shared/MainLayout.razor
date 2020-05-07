@@ -1,17 +1,33 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="main">
-    <div class="top-row px-4 justify-content-around">
-        <RadzenImage Path="/images/logo.png"></RadzenImage>
+    <div class="top-row px-4 justify-content-between image">
+        <RadzenImage Path="/images/logo.png" Style="height: 40px;" />
         <RadzenMenu>
             <RadzenMenuItem Text="Home" Path="home" />
+            <RadzenImage Path="/images/line.jpg" Style="height: 40px; align-self: center;" />
             <RadzenMenuItem Text="Showcase" Path="showcase" />
+            <RadzenImage Path="/images/line.jpg" Style="height: 40px; align-self: center;" />
             <RadzenMenuItem Text="Crew" Path="crew" />
+            <RadzenImage Path="/images/line.jpg" Style="height: 40px; align-self: center;" />
             <RadzenMenuItem Text="Contact" Path="contact" />
         </RadzenMenu>
     </div>
 
-    <div class="content px-4">
+    <div>
         @Body
+    </div>
+    <div class="footer">
+        <div class="bottom-row justify-content-center">
+            <RadzenMenu>
+                <RadzenMenuItem Text="Home" Path="home" />
+                <RadzenImage Path="/images/line.jpg" Style="height: 40px; align-self: center;" />
+                <RadzenMenuItem Text="Showcase" Path="showcase" />
+                <RadzenImage Path="/images/line.jpg" Style="height: 40px; align-self: center;" />
+                <RadzenMenuItem Text="Crew" Path="crew" />
+                <RadzenImage Path="/images/line.jpg" Style="height: 40px; align-self: center;" />
+                <RadzenMenuItem Text="Contact" Path="contact" />
+            </RadzenMenu>
+        </div>
     </div>
 </div>

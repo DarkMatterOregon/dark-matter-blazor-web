@@ -1,8 +1,8 @@
-@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-image: url("/images/space-big.jpg")
+    /*background-image: url("/images/space-big.jpg")*/
 }
 
 a, .btn-link {
@@ -33,13 +33,11 @@ app {
 
     .main .top-row {
         background-color: #f7f7f7;
-        border-bottom: 1px solid #d6d5d5;
         justify-content: flex-end;
     }
 
         .main .top-row > a, .main .top-row .btn-link {
             white-space: nowrap;
-            margin-left: 1.5rem;
         }
 
 .main .top-row a:first-child {
@@ -168,11 +166,6 @@ app {
         top: 0;
     }
 
-    .main > div {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-
     .navbar-toggler {
         display: none;
     }
@@ -181,4 +174,144 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+}
+
+div.image {
+    background-image: url("/images/spacelight.png");
+}
+
+.navigation-item {
+    background-color: transparent;
+}
+
+.menu:not(.profile-menu){
+    background-color: transparent;
+}
+
+.menu:not(.profile-menu) .navigation-item-link{
+    color: white;
+    font-size: x-large;
+}
+
+.menu:not(.profile-menu) .navigation-item{
+    border-right-width: 1px;
+    border-right-color: white;
+}
+
+div.linebar{
+    background-image: url("line.jpg");
+}
+
+.bottom-row {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    flex: 1;
+    padding: 0rem;
+    border-top: none;
+    background-color: #672E31;
+}
+
+    .footer .bottom-row {
+        background-color: #672E31;
+        justify-content: flex-end;
+    }
+
+        .footer .bottom-row > a, .main .bottom-row .btn-link {
+            white-space: nowrap;
+            margin-left: 1.5rem;
+        }
+
+        .footer .bottom-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+div.index-section-1 {
+    background-image: url("/images/spacelight.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+p{
+    margin-bottom: 0rem;
+}
+
+div.index-section-2 {
+    justify-content: center;
+    align-self: center;
+    background-color: white;
+    padding-left: 25rem;
+    padding-right: 25rem;
+}
+
+.inner-section{
+    padding-bottom: 5rem;
+}
+
+.inner-section > h1{
+    color: black;
+}
+.inner-section > p {
+    color: black;
+}
+
+div.index-section-3 {
+    background-image: url("/images/space2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding-left: 25rem;
+    padding-right: 25rem;
+}
+
+.index-section-3-block-top {
+    display: block;
+    width: 25%;
+    background-color: rgba(11, 11, 11, 0.4);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.index-section-3-block-bottom {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+    width: 40%;
+    background-color: rgba(11, 11, 11, 0.4);
+}
+
+div.index-section-4 {
+    background-color: white;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    display: flex;
+    height: 400px;
+}
+
+#box1{
+    z-index: 2;
+    position: absolute;
+}
+
+#box2 {
+    z-index: 1;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    bottom: 50px;
+    background-color: #82A1B6;
+    width: 65rem;
+    height: 12rem;
+    margin-left: 10rem;
+    margin-top: 8rem;
+    padding-left: 7rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
 }
