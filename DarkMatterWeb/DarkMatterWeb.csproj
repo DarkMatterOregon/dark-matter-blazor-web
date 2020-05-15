@@ -8,10 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Markdown\blazor-is-the-future.md" />
+    <None Remove="Markdown\business-apps-in-the-cloud.md" />
+    <None Remove="Markdown\mobile-apps.md" />
     <None Remove="Markdown\remote-team-building.md" />
+    <None Remove="Markdown\we-love-dot-net.md" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Markdown\blazor-is-the-future.md" />
+    <EmbeddedResource Include="Markdown\we-love-dot-net.md" />
+    <EmbeddedResource Include="Markdown\mobile-apps.md" />
+    <EmbeddedResource Include="Markdown\business-apps-in-the-cloud.md" />
     <EmbeddedResource Include="Markdown\remote-team-building.md" />
   </ItemGroup>
 

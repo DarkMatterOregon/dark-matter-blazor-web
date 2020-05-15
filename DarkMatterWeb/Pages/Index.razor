@@ -32,22 +32,18 @@
            <MarkdownView Content="@remoteTeamBuilding"></MarkdownView>
         </div>
         <div class="index-section-3-block-top">
-            <h2>Business Apps in the Cloud</h2>
-            <p>Cloud Apps, aka Web Apps, Web APIs, & Mobile Back-Ends. Not much to look at, but they get the job done. We build infrastructure in Azure and AWS using Serverless and Docker. We specialize in taking monolithic server apps and re-tooling them for the cloud, often with substantial cost savings.</p>
+            <MarkdownView Content="@businessAppsInTheCloud"></MarkdownView>
         </div>
         <div class="index-section-3-block-top">
-            <h2>Mobile Apps</h2>
-            <p>It’s all about mobile. App-Store Apps in React Native. Progressive Web Apps in JavaScript, HTML and CSS. ASP.Net web apps that are mobile friendly will also run on larger screens of course.</p>
+            <MarkdownView Content="@mobileApps"></MarkdownView>
         </div>
     </div>
     <div style="display: flex; justify-content: space-around">
         <div class="index-section-3-block-bottom">
-            <h2>We Love C# and .Net</h2>
-            <p>Our founders started using .Net almost 20 years ago and have kept up with all the twists and turns along the way. Today we deploy C# running on Linux containers in the cloud and couldn’t be happier. Microsoft embracing open source was the best choice they ever made.</p>
+            <MarkdownView Content="@weLoveDotNet"></MarkdownView>
         </div>
         <div class="index-section-3-block-bottom">
-            <h2>Blazer is the Future</h2>
-            <p>We are one of the first teams delivering Blazor Server Apps in production. Web Assembly opens up a new world of web development and we’ll be the first to deliver Blazor Client Apps as well. It’s not often that a game-changing technology comes along that radically simplifies development like Blazor. We might seem like risk-takers at the moment, but Blazor not an experiment. It’s baked into .Net and has a bright future with a very long tail.</p>
+            <MarkdownView Content="@blazorIsTheFuture"></MarkdownView>
         </div>
     </div>
 </div>
@@ -72,15 +68,39 @@
 {
 
     string remoteTeamBuilding;
+    string businessAppsInTheCloud;
+    string mobileApps;
+    string weLoveDotNet;
+    string blazorIsTheFuture;
 
     protected override async Task OnInitializedAsync()
     {
         var assembly = Assembly.GetEntryAssembly();
         var resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.remote-team-building.md");
-        //var names = assembly.GetManifestResourceNames();
         using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
         {
             remoteTeamBuilding = await reader.ReadToEndAsync();
         }
+        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.business-apps-in-the-cloud.md");
+        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+        {
+            businessAppsInTheCloud = await reader.ReadToEndAsync();
+        }
+        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.mobile-apps.md");
+        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+        {
+            mobileApps = await reader.ReadToEndAsync();
+        }
+        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.we-love-dot-net.md");
+        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+        {
+            weLoveDotNet = await reader.ReadToEndAsync();
+        }
+        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.blazor-is-the-future.md");
+        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+        {
+            blazorIsTheFuture = await reader.ReadToEndAsync();
+        }
+
     }
 }
