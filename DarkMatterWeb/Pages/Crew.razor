@@ -1,0 +1,54 @@
+﻿@page "/crew"
+@using System.IO
+@using System.Reflection
+@using System.Text
+@using DarkMatterWeb.Models
+@using DarkMatterWeb.Shared.Crew
+
+<div class="crew-section-1">
+    <h1 style="margin-left: 5rem;">Meet the Crew</h1>
+</div>
+<div class="outer-crew">
+    <div class="inner-crew">
+        @foreach (CrewMember crewMember in CrewMembers)
+        {
+            <Member CrewMember="@crewMember" />
+        }
+    </div>
+</div>
+
+@code {
+
+    protected List<CrewMember> CrewMembers { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        CrewMembers = new List<CrewMember>();
+        CrewMembers.Add(new CrewMember()
+        {
+            ID = 0,
+            Name = "Sam Gerendasy",
+            Github = "https://github.com/sgerendasy",
+            Image = "face-4.png",
+            Specialities = "Being Sam"
+        });
+
+        CrewMembers.Add(new CrewMember()
+        {
+            ID = 1,
+            Name = "Mark Davis",
+            Github = "https://github.com/",
+            Image = "face-4.png",
+            Specialities = "Being Mark"
+        });
+        CrewMembers.Add(new CrewMember()
+        {
+            ID = 2,
+            Name = "Doug Frazier",
+            Github = "https://github.com/",
+            Image = "face-4.png",
+            Specialities = "Being Doug"
+        });
+        }
+}

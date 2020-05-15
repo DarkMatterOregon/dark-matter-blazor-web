@@ -1,0 +1,28 @@
+﻿@using DarkMatterWeb.Models;
+
+@if (CrewMember == null)
+{
+    <p>Loading..</p>
+}
+else
+{
+<div class="crew-section-2">
+    <img src="/images/face-4.png" style="width: 80px; height: 80px;" />
+    <h2 style="color: black">@CrewMember.Name</h2>
+    <p style="color: black">Github: @CrewMember.Github</p>
+    <p style="color: black">Specialities: @CrewMember.Specialities</p>
+</div>
+}
+
+
+
+@code {
+    [Parameter]
+    public CrewMember CrewMember { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+}

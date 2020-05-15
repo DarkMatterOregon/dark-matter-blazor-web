@@ -315,3 +315,51 @@ div.index-section-4 {
     padding-right: 3rem;
     padding-top: 1rem;
 }
+
+div.crew-section-1 {
+    background-image: url("/images/spacelight.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20rem;
+}
+
+div.crew-section-1 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.crew-section-2 {
+    display: block;
+    width: 40rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+}
+
+div.outer-crew {
+    padding-top: 2rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+div.inner-crew {
+    /*padding-left: 25%;
+    padding-right: 25%;*/
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
