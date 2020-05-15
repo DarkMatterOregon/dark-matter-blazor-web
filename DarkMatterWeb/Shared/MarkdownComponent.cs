@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 using Ganss.XSS;
 using Markdig;
@@ -31,8 +34,15 @@ namespace EugeneFoodScene.Data
         {
             if (!string.IsNullOrWhiteSpace(_content))
             {
+                string readValue;
+                var assembly = Assembly.GetEntryAssembly();
+                var resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.wwwroot.Markdown." + value);
+                using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+                {
+                    readValue = reader.ReadToEnd();
+                }
                 // Convert markdown string to HTML
-                var html = Markdig.Markdown.ToHtml(value,
+                var html = Markdig.Markdown.ToHtml(readValue,
                     new MarkdownPipelineBuilder().UseAdvancedExtensions().Build());
 
                 var htmlSanitizer = new HtmlSanitizer();

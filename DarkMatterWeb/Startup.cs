@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using DarkMatterWeb.Data;
 using Ganss.XSS;
+using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace DarkMatterWeb
 {

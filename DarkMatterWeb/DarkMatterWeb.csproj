@@ -8,19 +8,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Markdown\blazor-is-the-future.md" />
-    <None Remove="Markdown\business-apps-in-the-cloud.md" />
-    <None Remove="Markdown\mobile-apps.md" />
-    <None Remove="Markdown\remote-team-building.md" />
-    <None Remove="Markdown\we-love-dot-net.md" />
+    <None Remove="wwwroot\Markdown\blazor-is-the-future.md" />
+    <None Remove="wwwroot\Markdown\business-apps-in-the-cloud.md" />
+    <None Remove="wwwroot\Markdown\mobile-apps.md" />
+    <None Remove="wwwroot\Markdown\remote-team-building.md" />
+    <None Remove="wwwroot\Markdown\we-love-dot-net.md" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Markdown\blazor-is-the-future.md" />
-    <EmbeddedResource Include="Markdown\we-love-dot-net.md" />
-    <EmbeddedResource Include="Markdown\mobile-apps.md" />
-    <EmbeddedResource Include="Markdown\business-apps-in-the-cloud.md" />
-    <EmbeddedResource Include="Markdown\remote-team-building.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\blazor-is-the-future.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\we-love-dot-net.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\mobile-apps.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\business-apps-in-the-cloud.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\remote-team-building.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Markdown\contribute.md" />
   </ItemGroup>
 
   <ItemGroup>

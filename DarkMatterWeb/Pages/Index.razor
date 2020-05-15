@@ -29,21 +29,21 @@
     <h1>Our Work</h1>
     <div style="display: flex; justify-content: space-around">
         <div class="index-section-3-block-top">
-           <MarkdownView Content="@remoteTeamBuilding"></MarkdownView>
+           <MarkdownView Content="remote-team-building.md"></MarkdownView>
         </div>
         <div class="index-section-3-block-top">
-            <MarkdownView Content="@businessAppsInTheCloud"></MarkdownView>
+            <MarkdownView Content="business-apps-in-the-cloud.md"></MarkdownView>
         </div>
         <div class="index-section-3-block-top">
-            <MarkdownView Content="@mobileApps"></MarkdownView>
+            <MarkdownView Content="mobile-apps.md"></MarkdownView>
         </div>
     </div>
     <div style="display: flex; justify-content: space-around">
         <div class="index-section-3-block-bottom">
-            <MarkdownView Content="@weLoveDotNet"></MarkdownView>
+            <MarkdownView Content="we-love-dot-net.md"></MarkdownView>
         </div>
         <div class="index-section-3-block-bottom">
-            <MarkdownView Content="@blazorIsTheFuture"></MarkdownView>
+            <MarkdownView Content="blazor-is-the-future.md"></MarkdownView>
         </div>
     </div>
 </div>
@@ -67,40 +67,40 @@
 @code
 {
 
-    string remoteTeamBuilding;
-    string businessAppsInTheCloud;
-    string mobileApps;
-    string weLoveDotNet;
-    string blazorIsTheFuture;
+    //string remoteTeamBuilding;
+    //string businessAppsInTheCloud;
+    //string mobileApps;
+    //string weLoveDotNet;
+    //string blazorIsTheFuture;
 
-    protected override async Task OnInitializedAsync()
-    {
-        var assembly = Assembly.GetEntryAssembly();
-        var resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.remote-team-building.md");
-        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
-        {
-            remoteTeamBuilding = await reader.ReadToEndAsync();
-        }
-        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.business-apps-in-the-cloud.md");
-        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
-        {
-            businessAppsInTheCloud = await reader.ReadToEndAsync();
-        }
-        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.mobile-apps.md");
-        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
-        {
-            mobileApps = await reader.ReadToEndAsync();
-        }
-        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.we-love-dot-net.md");
-        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
-        {
-            weLoveDotNet = await reader.ReadToEndAsync();
-        }
-        resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.blazor-is-the-future.md");
-        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
-        {
-            blazorIsTheFuture = await reader.ReadToEndAsync();
-        }
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    var assembly = Assembly.GetEntryAssembly();
+    //    var resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.remote-team-building.md");
+    //    using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+    //    {
+    //        remoteTeamBuilding = await reader.ReadToEndAsync();
+    //    }
+    //    resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.business-apps-in-the-cloud.md");
+    //    using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+    //    {
+    //        businessAppsInTheCloud = await reader.ReadToEndAsync();
+    //    }
+    //    resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.mobile-apps.md");
+    //    using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+    //    {
+    //        mobileApps = await reader.ReadToEndAsync();
+    //    }
+    //    resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.we-love-dot-net.md");
+    //    using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+    //    {
+    //        weLoveDotNet = await reader.ReadToEndAsync();
+    //    }
+    //    resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.blazor-is-the-future.md");
+    //    using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+    //    {
+    //        blazorIsTheFuture = await reader.ReadToEndAsync();
+    //    }
 
-    }
+    //}
 }
