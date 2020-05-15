@@ -1,4 +1,7 @@
 ﻿@page "/"
+@using System.IO
+@using System.Reflection
+@using System.Text
 
 <div class="index-section-1" style="height: 80rem;">
     <div style="margin-bottom: 15rem; justify-content: center">
@@ -26,8 +29,7 @@
     <h1>Our Work</h1>
     <div style="display: flex; justify-content: space-around">
         <div class="index-section-3-block-top">
-            <h2>Remote Team Building</h2>
-            <p>We are remote team builders. Our projects are distributed and staffed by digital natives. We stay in constant contact using chat and cloud based project management tools. Trained as Mozilla Open Leaders, our leads have skills building empathy and creating inclusive environments for collaboration. We can help you build a world-class remote work culture.</p>
+           <MarkdownView Content="@remoteTeamBuilding"></MarkdownView>
         </div>
         <div class="index-section-3-block-top">
             <h2>Business Apps in the Cloud</h2>
@@ -65,3 +67,20 @@
         </div>
     </div>
 </div>
+
+@code
+{
+
+    string remoteTeamBuilding;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var assembly = Assembly.GetEntryAssembly();
+        var resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.Markdown.remote-team-building.md");
+        //var names = assembly.GetManifestResourceNames();
+        using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+        {
+            remoteTeamBuilding = await reader.ReadToEndAsync();
+        }
+    }
+}
