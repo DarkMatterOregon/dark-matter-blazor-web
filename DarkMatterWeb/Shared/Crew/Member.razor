@@ -7,9 +7,22 @@
 else
 {
 <div class="crew-section-2">
-    <img src="/images/face-4.png" style="width: 80px; height: 80px;" />
-    <h2 style="color: black">@CrewMember.Name</h2>
-    <p style="color: black">Github: @CrewMember.Github</p>
+    @if (String.IsNullOrEmpty(CrewMember.Image))
+    {
+        <img src="@(githubURL + CrewMember.GithubUserName + png)" style="width: 80px; height: 80px;" />
+    }
+    else
+    {
+        <img src="@CrewMember.Image" style="width: 80px; height: 80px;" />
+    }
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2 style="color: black">@CrewMember.Name</h2>
+        <div style="display: flex; justify-content: space-between;">
+            <a href="@(githubURL + CrewMember.GithubUserName)" style="vertical-align: central;"><img src="/images/GitHub-Mark-32px.png" style="width: 20px; height: 20px; margin-right: .5rem;" /></a>
+            <a href="@CrewMember.LinkedInURL" style="vertical-align: central;"><img src="/images/LI-In-Bug.png" style="width: 23.5px; height: 20px;" /></a>
+        </div>
+
+    </div>
     <p style="color: black">Specialities: @CrewMember.Specialities</p>
 </div>
 }
@@ -19,6 +32,8 @@ else
 @code {
     [Parameter]
     public CrewMember CrewMember { get; set; }
+    private const string githubURL = "https://github.com/";
+    private const string png = ".png?size=80";
 
     protected override void OnInitialized()
     {
