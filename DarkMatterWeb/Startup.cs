@@ -13,6 +13,7 @@ using DarkMatterWeb.Data;
 using Ganss.XSS;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
+using DarkMatterWeb.Services;
 
 namespace DarkMatterWeb
 {
@@ -31,6 +32,7 @@ namespace DarkMatterWeb
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddSingleton(new AirTableService(Configuration));
             services.AddTransient<HtmlSanitizer>();
         }
 
