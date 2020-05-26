@@ -1,0 +1,41 @@
+﻿@page "/crew"
+@using System.IO
+@using System.Reflection
+@using System.Text
+@using DarkMatterWeb.Models
+@using DarkMatterWeb.Shared.Crew
+@using DarkMatterWeb.Helpers
+@using DarkMatterWeb.Services
+
+@inject AirTableService airTableService
+
+<div class="crew-section-1">
+    <h1 style="margin-left: 5rem;">Meet the Crew</h1>
+</div>
+<div class="outer-crew">
+    @{
+        for (int i = 0; i < CrewMembers.Count(); i += 3)
+        {
+        <div class="inner-crew">
+            @for (int j = 0; j < 3; j++)
+            {
+                if (i + j < CrewMembers.Count())
+                {
+                    <Member CrewMember="@CrewMembers[i+j]" />
+                }
+            }
+        </div>
+        }
+    }
+</div>
+
+@code {
+
+    protected List<CrewMember> CrewMembers { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        CrewMembers = AsyncUtil.RunSync(() => airTableService.GetCrewMembersAsync());
+    }
+}
