@@ -83,5 +83,28 @@ namespace DarkMatterWeb.Services
             }
             return _crew.OrderBy(x => random.Next(1, 1000)).ToList();
         }
+
+        public async Task<bool> ContactUs(ContactUsContent contact)
+        {
+            try
+            {
+                using (AirtableBase airtableBase = new AirtableBase(appKey, baseId))
+                {
+                    var fields = new Fields();
+                    fields.AddField("Name", contact.Name);
+                    fields.AddField("Message", contact.Message);
+                    fields.AddField("Email", contact.Email);
+                    fields.AddField("Phone", contact.Phone);
+                    fields.AddField("Company", contact.Company);
+                    var response = await airtableBase.CreateRecord("Contact", fields, true);
+                    return response.Success;
+                }
+                // alert Doug or Mark about new message?
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
