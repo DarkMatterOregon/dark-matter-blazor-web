@@ -4,17 +4,29 @@
 @using System.Text
 @using DarkMatterWeb.Models
 @using DarkMatterWeb.Shared.Crew
+@using DarkMatterWeb.Helpers
+@using DarkMatterWeb.Services
+
+@inject AirTableService airTableService
 
 <div class="crew-section-1">
     <h1 style="margin-left: 5rem;">Meet the Crew</h1>
 </div>
 <div class="outer-crew">
-    <div class="inner-crew">
-        @foreach (CrewMember crewMember in CrewMembers)
+    @{
+        for (int i = 0; i < CrewMembers.Count(); i += 3)
         {
-            <Member CrewMember="@crewMember" />
+        <div class="inner-crew">
+            @for (int j = 0; j < 3; j++)
+            {
+                if (i + j < CrewMembers.Count())
+                {
+                    <Member CrewMember="@CrewMembers[i+j]" />
+                }
+            }
+        </div>
         }
-    </div>
+    }
 </div>
 
 @code {
@@ -24,34 +36,6 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        CrewMembers = new List<CrewMember>();
-        CrewMembers.Add(new CrewMember()
-        {
-            ID = 0,
-            Name = "Sam Gerendasy",
-            GithubUserName = "sgerendasy",
-            //Image = "face-4.png",
-            Specialities = "Being Sam",
-            LinkedInURL = "https://www.linkedin.com/in/sam-gerendasy-b02793157/"
-        });
-
-        CrewMembers.Add(new CrewMember()
-        {
-            ID = 1,
-            Name = "Mark Davis",
-            GithubUserName = "nohorse",
-            //Image = "face-4.png",
-            Specialities = "Being Mark",
-            LinkedInURL = "https://www.linkedin.com/in/markdavs/"
-        });
-        CrewMembers.Add(new CrewMember()
-        {
-            ID = 2,
-            Name = "Doug Frazier",
-            GithubUserName = "mixlplix",
-            //Image = "face-4.png",
-            Specialities = "Being Doug",
-            LinkedInURL = "https://www.linkedin.com/in/dofrazier/"
-        });
+        CrewMembers = AsyncUtil.RunSync(() => airTableService.GetCrewMembersAsync());
     }
 }

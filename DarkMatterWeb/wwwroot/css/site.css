@@ -334,9 +334,9 @@ div.crew-section-1 {
     align-items: center;
 }
 
-div.crew-section-2 {
+div.crew-member-card {
     display: block;
-    width: 40rem;
+    width: 20rem;
     background-color: rgba(255, 255, 255, 0.8);
     border-width: 2px;
     border-style: solid;
@@ -350,7 +350,10 @@ div.crew-section-2 {
 div.outer-crew {
     padding-top: 2rem;
     background-color: white;
-    display: flex;
+    /*    display: flex;*/
+    padding-left: 25%;
+    padding-right: 25%;
+    width: 100%;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -360,6 +363,6 @@ div.inner-crew {
     /*padding-left: 25%;
     padding-right: 25%;*/
     display: flex;
-    width: 50%;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-evenly;
 }
