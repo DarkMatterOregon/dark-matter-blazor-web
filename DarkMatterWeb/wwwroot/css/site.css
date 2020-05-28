@@ -1,7 +1,8 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap');
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     /*background-image: url("/images/starry-sky.jpg")*/
 }
 
@@ -417,4 +418,145 @@ div.contact-us-send-button {
     width: 40rem;
     justify-content: center;
     margin-top: 2rem;
+}
+
+/* 
+        Brandon's changes (will integrate with above when complete)
+            -I plan to remove all inline styleing as well
+*/
+
+/* Header */
+.top-row {
+    padding: 0 6rem;
+    height: 6.25rem;
+}
+    .main .top-row .justify-content-between .image img {
+    padding: 3rem;
+    }
+
+    .main .top-row .navigation-item-wrapper, 
+    .main .bottom-row .navigation-item-wrapper {
+        padding: 0 1.4rem;
+    }
+
+    .menu:not(.profile-menu) .navigation-item-link {
+        color: white;
+        font-size: 1.29rem;
+    }
+
+/* Showcase */
+div.index-section-1 {
+    height: 90vh;
+    padding: 3.5rem 6rem;
+}
+
+.header-primary {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+
+/* Who we are */
+div.index-section-2 {
+    padding: 3.5rem 6rem;
+}
+
+.header-primary--large {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.header-secondary {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.inner-section {
+    padding-bottom: 1.5rem;
+}
+
+.inner-section p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+/* Our Work */
+div.index-section-3 {
+    padding: 3.5rem 6rem;
+}
+
+div.index-section-3-block-top,
+div.index-section-3-block-bottom {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.54);
+}
+
+div.index-section-3-block-top {
+    width: 30%;
+}
+
+div.index-section-3-block-bottom {
+    width: 48.5%;
+}
+
+div.index-section-3-block-top h2,
+div.index-section-3-block-bottom h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+div.index-section-3-block-top p,
+div.index-section-3-block-bottom p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+/* CTA - ending */
+div.index-section-4 {
+    padding: 3.5rem 6rem;
+    position: relative;
+    height: 35rem;
+}
+
+.blank-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7.5rem;
+    width: 100vw;
+}
+
+#contact-us-box1 {
+    position: relative;
+    left: 80px;
+    max-width: 76.5%;
+    height: 17.8rem;
+    padding-left: 8rem;
+    padding-right: 6rem;
+}
+
+#contact-us-box1 p {
+    font-weight: 500;
+}
+
+.cta-btn{
+position: absolute;
+display: flex;
+flex-direction: column;
+bottom: 5rem;
+right: 12rem;
+}
+
+.cta-btn a {
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+/* footer */
+.bottom-row {
+    height: 6.25rem;
 }
