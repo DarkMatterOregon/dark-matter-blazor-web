@@ -12,29 +12,33 @@
 <div class="crew-section-1">
     
 </div>
-<div id="contact-us-box2">
-    <h1>Contact Us</h1>
-    <p>Give us a shout. We would love to hear from you</p>
-</div>
+
 
 <div class="contact-us-page">
+    <div id="contact-us-box2">
+        <h1 class="header-primary header-primary--large">Contact Us</h1>
+        <p>Give us a shout. We would love to hear from you</p>
+    </div>
+
     @if (_messageSent)
     {
         <h4 style="color: black; text-align: center; width: 40rem;">Thanks! We'll hit you back soon.</h4>
     }
     else
     {
-        <RadzenTextBox class="custom-text-input" Placeholder="Name" @bind-Value="_name" />
-        <RadzenTextBox class="custom-text-input" Placeholder="Email" @bind-Value="_email" />
-        <div style="display: flex; flex-wrap: wrap; margin-top: 2rem;">
-            <RadzenTextBox class="custom-text-input" Placeholder="Phone Number (optional)" @bind-Value="_phone" />
-            <RadzenTextBox class="custom-text-input" Placeholder="Company Name (optional)" @bind-Value="_company" />
-        </div>
-        <div style="display: flex; flex-wrap: wrap; margin-top: 2rem;">
-            <RadzenTextArea class="custom-text-area" @bind-Value="_message" />
-        </div>
-        <div class="contact-us-send-button">
-            <RadzenButton Text="Send" Style="width: 40rem;" Click="Send" />
+        <div class="contact-us-form">
+            <RadzenTextBox class="custom-text-input" Placeholder="Name" @bind-Value="_name" />
+            <RadzenTextBox class="custom-text-input email-input" style="margin-right: 0;" Placeholder="Email" @bind-Value="_email" />
+            <div style="margin-top: 2rem;">
+                <RadzenTextBox class="custom-text-input" Placeholder="Phone Number (optional)" @bind-Value="_phone" />
+                <RadzenTextBox class="custom-text-input company-name-input"  style="margin-right: 0;" Placeholder="Company Name (optional)" @bind-Value="_company" />
+            </div>
+            <div style="display: flex; flex-wrap: wrap; margin-top: 2rem;">
+                <RadzenTextArea class="custom-text-area" @bind-Value="_message" />
+            </div>
+            <div class="contact-us-send-button">
+                <RadzenButton Text="Send" Style="width: 40rem;" Click="Send" />
+            </div>
         </div>
     }
 </div>

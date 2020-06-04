@@ -22,18 +22,24 @@ app {
     flex-direction: column;
 }
 
+/* 
+        HEADER NAVBAR
+*/
 .top-row {
-    height: 3.5rem;
     display: flex;
     align-items: center;
+    padding: 0 6rem;
+    height: 6.25rem;
+    z-index: 99;
 }
 
 .main {
     flex: 1;
+    overflow: hidden;
 }
 
     .main .top-row {
-        background-color: #f7f7f7;
+        background-color: #000;
         justify-content: flex-end;
     }
 
@@ -136,20 +142,6 @@ app {
     top: 0.5rem;
 }
 
-@media (max-width: 767.98px) {
-    .main .top-row:not(.auth) {
-        display: none;
-    }
-
-    .main .top-row.auth {
-        justify-content: space-between;
-    }
-
-    .main .top-row a, .main .top-row .btn-link {
-        margin-left: 0;
-    }
-}
-
 @media (min-width: 768px) {
     app {
         flex-direction: row;
@@ -175,10 +167,6 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
-}
-
-div.image {
-    background-image: url("/images/space-light.jpg");
 }
 
 .navigation-item {
@@ -231,6 +219,10 @@ div.linebar{
             text-overflow: ellipsis;
         }
 
+
+/* 
+        HOME PAGE
+*/
 div.index-section-1 {
     background-image: url("/images/space-light.jpg");
     background-repeat: no-repeat;
@@ -300,6 +292,9 @@ div.index-section-4 {
     z-index: 2;
     position: absolute;
 }
+/*
+        CONTACT US PAGE 
+*/
 
 #contact-us-box1 {
     z-index: 1;
@@ -318,79 +313,66 @@ div.index-section-4 {
 }
 
 #contact-us-box2 {
-    z-index: 1;
+    min-height: 9.5rem;
+    font-size: 1.2rem;
     position: absolute;
-    top: 10rem;
-    bottom: 50px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     background-color: #82A1B6;
-    width: 40rem;
-    height: 12rem;
-    margin-left: 25%;
-    margin-top: 8rem;
-    padding-left: 7rem;
-    padding-right: 3rem;
-    padding-top: 1rem;
+    padding: 1rem 4rem;
 }
 
+
+/*
+        CREW PAGE
+*/
 div.crew-section-1 {
-    background-image: url("/images/space-light.jpg");
+    background-image: url("/images/starry-sky.jpg");
     background-repeat: no-repeat;
+    background-position: top;
     background-attachment: fixed;
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 20rem;
-}
-
-div.crew-section-1 {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: cover; 
+    height: 15.5rem;
 }
 
 div.crew-member-card {
     display: block;
-    width: 20rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 8px;
-    border-color: black;
+    width: 30%;
+    min-height: 15.5rem;
+    border: 2px solid #000;
+    background-color: #fff;
     padding: 1rem;
-    margin-bottom: 2rem;
-    margin-right: 5rem;
 }
 
 div.outer-crew {
     padding-top: 2rem;
     background-color: white;
-    /*    display: flex;*/
-    padding-left: 25%;
-    padding-right: 25%;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    padding: 0 3.5rem 6rem;
+    min-height: 25rem;
 }
 
 div.inner-crew {
-    /*padding-left: 25%;
-    padding-right: 25%;*/
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-evenly;
 }
 
 div.contact-us-page {
+    position: relative;
     height: 50rem;
     background-color: white;
-    padding-left: 25%;
-    padding-top: 8rem;
+    display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
+} 
+
+.custom-text-input:focus,
+.custom-text-area:focus {
+    outline: none; 
+    border: 2px solid #82A1B6;
 }
 
 .custom-text-input {
@@ -422,27 +404,40 @@ div.contact-us-send-button {
 
 /* 
         Brandon's changes (will integrate with above when complete)
-            -I plan to remove all inline styleing as well
 */
 
 /* Header */
-.top-row {
-    padding: 0 6rem;
-    height: 6.25rem;
+.main .top-row .justify-content-between .image {
+    width: 100%;
 }
-    .main .top-row .justify-content-between .image img {
-    padding: 3rem;
+
+.main .top-row .justify-content-between .image img {
+padding: 3rem;
+}
+
+.main .top-row .navigation-item-wrapper, 
+.main .bottom-row .navigation-item-wrapper {
+    padding: 0 1.4rem;
+}
+
+.menu:not(.profile-menu) .navigation-item-link {
+    color: white;
+    font-size: 1.29rem;
+}
+
+@media(max-width: 768px) {
+    .main .top-row {
+        flex-direction: column;
     }
 
-    .main .top-row .navigation-item-wrapper, 
-    .main .bottom-row .navigation-item-wrapper {
-        padding: 0 1.4rem;
+    .main .top-row .justify-content-between .image img{
+        padding: 5rem;
     }
+}
 
-    .menu:not(.profile-menu) .navigation-item-link {
-        color: white;
-        font-size: 1.29rem;
-    }
+/* 
+        HOME PAGE
+*/
 
 /* Showcase */
 div.index-section-1 {
@@ -559,4 +554,8 @@ right: 12rem;
 /* footer */
 .bottom-row {
     height: 6.25rem;
+}
+
+.crew-section-1 {
+    padding: 3.5rem 6rem;
 }
