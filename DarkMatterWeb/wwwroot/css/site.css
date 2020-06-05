@@ -227,10 +227,15 @@ div.index-section-1 {
     background-image: url("/images/space-light.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover; 
+    background-position: center; 
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+}
+
+.showcase-box {
+    margin-top: 15rem;
 }
 
 p{
@@ -260,9 +265,7 @@ div.index-section-3 {
     background-image: url("/images/milky-way.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
-    padding-left: 25rem;
-    padding-right: 25rem;
+    background-size: cover;
 }
 
 .index-section-3-block-top {
@@ -425,15 +428,7 @@ padding: 3rem;
     font-size: 1.29rem;
 }
 
-@media(max-width: 768px) {
-    .main .top-row {
-        flex-direction: column;
-    }
 
-    .main .top-row .justify-content-between .image img{
-        padding: 5rem;
-    }
-}
 
 /* 
         HOME PAGE
@@ -517,6 +512,8 @@ div.index-section-4 {
 }
 
 .blank-row {
+    background-image: url(/images/space-light.jpg);
+    background-position: bottom;
     position: absolute;
     top: 0;
     left: 0;
@@ -524,11 +521,16 @@ div.index-section-4 {
     width: 100vw;
 }
 
+.cta-section {
+    width: 100%;
+    overflow: none;
+}
+
 #contact-us-box1 {
     position: relative;
     left: 80px;
     max-width: 76.5%;
-    height: 17.8rem;
+    min-height: 17.8rem;
     padding-left: 8rem;
     padding-right: 6rem;
 }
@@ -556,6 +558,124 @@ right: 12rem;
     height: 6.25rem;
 }
 
-.crew-section-1 {
-    padding: 3.5rem 6rem;
+@media(max-width: 1350px) {
+    /* Home Page CTA */
+    .cta-btn {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+}
+
+@media(max-width: 1200px) {
+    /* Our Work */
+    .section-box-container {
+        flex-direction: column;
+    }
+    div.index-section-3-block-top {
+        width: 100%;
+        display: block;
+    }
+    
+    div.index-section-3-block-bottom {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media(max-width: 992px) {
+    /* Home CTA section */
+    #contact-us-box1 {
+        min-height: 17rem;
+        margin-left: 5rem;
+        margin-top: 4rem;
+    }
+
+    #box1 {
+        width: 15.5rem;
+        height: 15.5rem;
+    }
+    
+    .header-primary--large {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 768px) {
+    /* Collapse Header Navbar */
+    .main-heading {
+        flex-direction: column;
+        min-height: 13rem;
+        padding: 1rem 2rem;
+    }
+
+    .top-row .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+    }
+        .top-row .menu img {
+        display: none;
+        }
+
+        .top-row.navigation-item {
+            display: block;
+            width: 100%;
+        }
+        .top-row .navigation-item:not(:last-child) {
+            border-bottom: 1px dotted #333;
+        }
+    
+    /* Showcase */
+    div.index-section-1 {
+        height: 80vh;
+        padding: 0 2rem;
+    }
+    .header-primary {
+        font-size: 1.7rem;
+    }
+    .showcase-box {
+        margin: 0;
+    }
+
+    /* Who we are */
+    div.index-section-2 {
+        padding: 3.5rem 2rem;
+    }
+
+    /* Our Work */
+    div.index-section-3 {
+        padding: 3.5rem 2rem;
+    }
+
+    /* Home Page CTA */
+    div.index-section-4 {
+        height: 45rem;
+    }
+
+    #box1 {
+        display: block;
+    }
+
+    #contact-us-box1 {
+        min-height: 20rem;
+        margin: 0;
+        padding: 5rem 1rem;
+        margin-top: 8rem;
+    }
+
+    .cta-btn {
+        bottom: 1rem;
+        right: 30%;
+    }
+
+        .cta-btn a {
+            font-size: 1rem;
+        }
+
+        .cta-btn img {
+            width: 6rem;
+            height: .5rem;
+        }
 }
