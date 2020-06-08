@@ -1,4 +1,4 @@
-﻿## Contribute
+﻿## Sample Showcase text!
 
 This is your site!  You can make it better!  
 

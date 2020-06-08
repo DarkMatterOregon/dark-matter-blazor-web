@@ -37,10 +37,18 @@ namespace EugeneFoodScene.Data
                 string readValue;
                 var assembly = Assembly.GetEntryAssembly();
                 var resourceStream = assembly.GetManifestResourceStream("DarkMatterWeb.wwwroot.Markdown." + value);
-                using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+                if (resourceStream != null)
                 {
-                    readValue = reader.ReadToEnd();
+                    using (var reader = new StreamReader(resourceStream, Encoding.UTF8))
+                    {
+                        readValue = reader.ReadToEnd();
+                    }
                 }
+                else
+                {
+                    readValue = $"markdown not found:{value}";
+                }
+
                 // Convert markdown string to HTML
                 var html = Markdig.Markdown.ToHtml(readValue,
                     new MarkdownPipelineBuilder().UseAdvancedExtensions().Build());

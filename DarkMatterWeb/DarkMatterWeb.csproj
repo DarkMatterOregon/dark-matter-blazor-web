@@ -7,32 +7,34 @@
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
+
   <ItemGroup>
-    <None Remove="wwwroot\Markdown\blazor-is-the-future.md" />
-    <None Remove="wwwroot\Markdown\business-apps-in-the-cloud.md" />
-    <None Remove="wwwroot\Markdown\mobile-apps.md" />
-    <None Remove="wwwroot\Markdown\remote-team-building.md" />
-    <None Remove="wwwroot\Markdown\we-love-dot-net.md" />
+    <Content Remove="wwwroot\Markdown\blazor-is-the-future.md" />
+    <Content Remove="wwwroot\Markdown\business-apps-in-the-cloud.md" />
+    <Content Remove="wwwroot\Markdown\mobile-apps.md" />
+    <Content Remove="wwwroot\Markdown\remote-team-building.md" />
+    <Content Remove="wwwroot\Markdown\showcase.md" />
+    <Content Remove="wwwroot\Markdown\we-love-dot-net.md" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\Markdown\blazor-is-the-future.md" />
-    <EmbeddedResource Include="wwwroot\Markdown\we-love-dot-net.md" />
-    <EmbeddedResource Include="wwwroot\Markdown\mobile-apps.md" />
     <EmbeddedResource Include="wwwroot\Markdown\business-apps-in-the-cloud.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\mobile-apps.md" />
     <EmbeddedResource Include="wwwroot\Markdown\remote-team-building.md" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Markdown\contribute.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\showcase.md" />
+    <EmbeddedResource Include="wwwroot\Markdown\we-love-dot-net.md" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Airtable" Version="1.1.2" />
+    <PackageReference Include="Blazorade.Bootstrap.Components" Version="1.0.2" />
     <PackageReference Include="HtmlSanitizer" Version="5.0.319" />
     <PackageReference Include="Markdig" Version="0.20.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
-    <PackageReference Include="Radzen.Blazor" Version="2.8.0" />
+    <PackageReference Include="MimeMapping" Version="1.0.1.26" />
+    <PackageReference Include="Radzen.Blazor" Version="2.9.10" />
   </ItemGroup>
 
 </Project>

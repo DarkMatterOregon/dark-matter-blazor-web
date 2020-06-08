@@ -6,15 +6,44 @@
 @using DarkMatterWeb.Shared.Crew
 @using DarkMatterWeb.Helpers
 @using DarkMatterWeb.Services
+@using System.Collections;
+@using System.IO;
+@using MimeMapping;
+@using Microsoft.AspNetCore.Hosting;
 
 @inject AirTableService airTableService
 
 <h1 style="margin-left: 5rem;">Showcase</h1>
+    <Carousel Interval="3333">
+        <CarouselItem>
+            <Jumbotron
+                Heading="ShowCase"
+                Lead="check it out..."
+            />
+        </CarouselItem>
+        <CarouselItem>  
+            <RadzenImage Path="images/showcase/kitten1.png"></RadzenImage>
+            <MarkdownView Content="showcase.md"></MarkdownView>
+        </CarouselItem>
+        <CarouselItem>  
+            <RadzenImage Path="images/showcase/kitten2.png"></RadzenImage>
+            <MarkdownView Content="showcase.md"></MarkdownView>
+        </CarouselItem>
+    </Carousel>
 
 @code {
 
+    List<ShowcaseItem> ShowCases = new List<ShowcaseItem>();
+
     protected override void OnInitialized()
     {
+        ShowCases.Add(new Models.ShowcaseItem(){Markdown = "showcase.md", ImgSrc = "Kitten1.png"});
+        ShowCases.Add(new Models.ShowcaseItem() { Markdown = "showcase.md", ImgSrc = "Kitten2.png" });
+        ShowCases.Add(new Models.ShowcaseItem(){Markdown = "showcase.md", ImgSrc = "Kitten3.png"});
+        ShowCases.Add(new Models.ShowcaseItem() { Markdown = "showcase.md", ImgSrc = "Kitten4.png" });
+
         base.OnInitialized();
     }
+
+   
 }
