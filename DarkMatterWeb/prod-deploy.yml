@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eugene-food-scene-deployment
+  name: dark-matter-web-deployment
   namespace: dark-matter-web-prod
   labels:
-    app:dark-matter-web
+    app: dark-matter-web
 spec:
   replicas: 1
   selector:
