@@ -341,7 +341,7 @@ div.crew-section-1 {
 }
 
 div.crew-member-card {
-    display: block;
+    /*display: block;*/
     width: 30%;
     min-height: 15.5rem;
     border: 2px solid #000;

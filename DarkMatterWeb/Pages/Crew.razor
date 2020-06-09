@@ -12,30 +12,24 @@
 <div class="crew-section-1">
     <h1 class="header-primary header-primary--large">Meet the Crew</h1>
 </div>
-<div class="outer-crew">
-    @{
-        for (int i = 0; i < CrewMembers.Count(); i += 3)
+
+<RadzenDataList WrapItems="true" Data="@CrewMembers" TItem="CrewMember" class="outer-crew" >
+    <Template Context="crew">
+        <RadzenCard class="inner-crew">
+            <Member CrewMember="@crew" />
+        </RadzenCard>
+    </Template>
+</RadzenDataList>
+    
+          
+
+    @code {
+
+        protected List<CrewMember> CrewMembers { get; set; }
+
+        protected override void OnInitialized()
         {
-        <div class="inner-crew">
-            @for (int j = 0; j < 3; j++)
-            {
-                if (i + j < CrewMembers.Count())
-                {
-                    <Member CrewMember="@CrewMembers[i+j]" />
-                }
-            }
-        </div>
+            base.OnInitialized();
+            CrewMembers = AsyncUtil.RunSync(() => airTableService.GetCrewMembersAsync());
         }
     }
-</div>
-
-@code {
-
-    protected List<CrewMember> CrewMembers { get; set; }
-
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-        CrewMembers = AsyncUtil.RunSync(() => airTableService.GetCrewMembersAsync());
-    }
-}
