@@ -29,7 +29,7 @@
         <div class="contact-us-form">
             <RadzenTextBox class="custom-text-input" Placeholder="Name" @bind-Value="_name" />
             <RadzenTextBox class="custom-text-input email-input" style="margin-right: 0;" Placeholder="Email" @bind-Value="_email" />
-            <div style="margin-top: 2rem;">
+            <div class="contact-phone-company-box" style="margin-top: 1rem;">
                 <RadzenTextBox class="custom-text-input" Placeholder="Phone Number (optional)" @bind-Value="_phone" />
                 <RadzenTextBox class="custom-text-input company-name-input"  style="margin-right: 0;" Placeholder="Company Name (optional)" @bind-Value="_company" />
             </div>
@@ -37,7 +37,7 @@
                 <RadzenTextArea class="custom-text-area" @bind-Value="_message" />
             </div>
             <div class="contact-us-send-button">
-                <RadzenButton Text="Send" Style="width: 40rem;" Click="Send" />
+                <RadzenButton Text="Send" Click="Send" />
             </div>
         </div>
     }

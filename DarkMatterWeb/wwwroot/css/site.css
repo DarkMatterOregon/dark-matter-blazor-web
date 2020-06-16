@@ -426,6 +426,10 @@ div.contact-us-send-button {
     margin-top: 2rem;
 }
 
+.contact-us-form .ui-button {
+    width: 40rem;
+}
+
 /* 
         Brandon's changes (will integrate with above when complete)
 */
@@ -732,6 +736,50 @@ right: 12rem;
                 min-height: 15.5rem;
                 width: 15.5rem;
             }
+
+    /*
+        CONTACT PAGE
+    */
+
+    div.contact-us-page {
+        height: 60rem;
+    } 
+
+    .custom-text-input,
+    .contact-us-form .ui-button {
+        display: block;
+        width: 60%;
+        text-align: center;
+    }
+
+    .textbox {
+        margin: 0 auto;
+    }
+
+    .textbox:nth-child(even) {
+        margin-left: 8rem;
+    }
+
+    .custom-text-input:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+
+
+    .custom-text-area {
+        width: 60%;
+        margin: 0 auto;
+        height: 20rem;
+    }
+
+
+
+    div.contact-us-send-button {
+        display: flex;
+        width: 40rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
 
 
     /* med added blazor-carousel*/
