@@ -4,6 +4,7 @@
 html, body {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     /*background-image: url("/images/starry-sky.jpg")*/
+    box-sizing: border-box;
 }
 
 a, .btn-link {
@@ -338,29 +339,49 @@ div.crew-section-1 {
     background-attachment: fixed;
     background-size: cover; 
     height: 15.5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
-div.crew-member-card {
-    /*display: block;*/
-    width: 30%;
-    min-height: 15.5rem;
-    border: 2px solid #000;
-    background-color: #fff;
-    padding: 1rem;
+div.crew-section-1 .header-primary {
+    padding-top: 1rem;
 }
 
 div.outer-crew {
     padding-top: 2rem;
     background-color: white;
-    padding: 0 3.5rem 6rem;
-    min-height: 25rem;
+    min-height: 40rem;
+    position: relative;
+} 
+
+div.outer-crew .ui-g {
+    display: grid;
+    justify-self: middle;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    grid-gap: 1rem;
+    top: -7rem;
+    padding: 0 6rem;
+
 }
 
-div.inner-crew {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+div.crew-member-card {
+    align-self: center;
+    margin: 0 auto;
+    min-height: 15.5rem;
+    width: 15.5rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    padding: 1rem;
+    display: block;
 }
+
+/*
+        CONTACT PAGE
+*/
 
 div.contact-us-page {
     position: relative;
@@ -564,7 +585,6 @@ right: 12rem;
         bottom: 1rem;
         right: 1rem;
     }
-
 }
 
 @media(max-width: 1200px) {
@@ -598,6 +618,21 @@ right: 12rem;
     
     .header-primary--large {
         font-size: 2rem;
+    }
+
+    /* Contact page */
+
+    div.outer-crew {
+        min-height: 50rem;
+    } 
+
+    div.outer-crew .ui-g {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    div.crew-member-card {
+        min-height: 15.5rem;
+        width: 20;
     }
 }
 
@@ -678,6 +713,26 @@ right: 12rem;
             width: 6rem;
             height: .5rem;
         }
+
+        /* crew page */
+
+    div.crew-section-1 .header-primary {
+        text-align: center;
+    }
+
+    div.outer-crew {
+        min-height: 80rem;
+    } 
+
+        div.outer-crew .ui-g {
+            grid-template-columns: 1fr;
+        }
+    
+            div.crew-member-card {
+                min-height: 15.5rem;
+                width: 15.5rem;
+            }
+
 
     /* med added blazor-carousel*/
     .blazor-carousel {
