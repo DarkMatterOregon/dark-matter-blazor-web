@@ -26,9 +26,11 @@
 
         protected List<CrewMember> CrewMembers { get; set; }
 
-        protected override void OnInitialized()
+        protected async override Task OnInitializedAsync()
         {
-            base.OnInitialized();
-            CrewMembers = AsyncUtil.RunSync(() => airTableService.GetCrewMembersAsync());
+           
+            CrewMembers = await airTableService.GetCrewMembersAsync();
         }
+
+     
     }
