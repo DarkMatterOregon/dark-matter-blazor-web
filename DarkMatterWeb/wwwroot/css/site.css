@@ -351,7 +351,7 @@ div.crew-section-1 .header-primary {
 div.outer-crew {
     padding-top: 2rem;
     background-color: white;
-    min-height: 40rem;
+    min-height: 45rem;
     position: relative;
 } 
 
@@ -636,7 +636,7 @@ right: 12rem;
     /* Contact page */
 
     div.outer-crew {
-        min-height: 50rem;
+        min-height: 60rem;
     } 
 
     div.outer-crew .ui-g {
@@ -738,7 +738,7 @@ right: 12rem;
     }
 
     div.outer-crew {
-        min-height: 95rem;
+        min-height: 110rem;
     } 
 
         div.outer-crew .ui-g {
