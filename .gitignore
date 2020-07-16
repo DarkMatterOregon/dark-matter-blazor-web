@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 
 DarkMatterWeb/.vscode/
+*.DS_Store

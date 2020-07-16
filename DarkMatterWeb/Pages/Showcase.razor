@@ -3,7 +3,6 @@
 @using System.Reflection
 @using System.Text
 @using DarkMatterWeb.Models
-@using DarkMatterWeb.Shared.Crew
 @using DarkMatterWeb.Helpers
 @using DarkMatterWeb.Services
 @using System.Collections;
@@ -14,36 +13,87 @@
 @inject AirTableService airTableService
 
 <h1 style="margin-left: 5rem;">Showcase</h1>
-    <Carousel Interval="3333" ShowControls="true" ShowIndicators="true" >
-        <CarouselItem>
-            <Jumbotron
-                Heading="ShowCase"
-                Lead="check it out..."
-            />
-        </CarouselItem>
-        <CarouselItem>  
-            <RadzenImage Path="images/showcase/kitten1.png"></RadzenImage>
-            <MarkdownView Content="showcase.md"></MarkdownView>
-        </CarouselItem>
-        <CarouselItem>  
-            <RadzenImage Path="images/showcase/kitten2.png"></RadzenImage>
-            <MarkdownView Content="showcase.md"></MarkdownView>
-        </CarouselItem>
-    </Carousel>
+<BSCarousel NumberOfItems="@items.Count">
+
+    <BSCarouselIndicators NumberOfItems="@items.Count"/>
+
+    <div class="carousel-inner">
+
+        @foreach (var t in items)
+        {
+            <BSCarouselItem src="@t.Source" alt="@t.Alt"/>
+        }
+
+    </div>
+
+    <BSCarouselControl CarouselDirection="CarouselDirection.Previous" NumberOfItems="@items.Count"/>
+
+    <BSCarouselControl CarouselDirection="CarouselDirection.Next" NumberOfItems="@items.Count"/>
+
+</BSCarousel>
 
 @code {
 
-    List<ShowcaseItem> ShowCases = new List<ShowcaseItem>();
+           IList<Item> items = new List<Item>
 
-    protected override void OnInitialized()
-    {
-        ShowCases.Add(new Models.ShowcaseItem(){Markdown = "showcase.md", ImgSrc = "Kitten1.png"});
-        ShowCases.Add(new Models.ShowcaseItem() { Markdown = "showcase.md", ImgSrc = "Kitten2.png" });
-        ShowCases.Add(new Models.ShowcaseItem(){Markdown = "showcase.md", ImgSrc = "Kitten3.png"});
-        ShowCases.Add(new Models.ShowcaseItem() { Markdown = "showcase.md", ImgSrc = "Kitten4.png" });
+           {
 
-        base.OnInitialized();
-    }
+               new Item
+               {
 
-   
+                   Source = "...First Slide",
+
+                   Alt = "First Slide",
+
+                   Caption = "Slide 1",
+
+                   Header = "Slide 1 Header"
+
+               },
+
+               new Item
+               {
+
+                   Source = "...Second Slide",
+
+                   Alt = "Second Slide",
+
+                   Caption = "Slide 2",
+
+                   Header = "Slide 2 Header"
+
+               },
+
+               new Item
+               {
+
+                   Source = "...Third Slide",
+
+                   Alt = "Third Slide",
+
+                   Caption = "Slide 3",
+
+                   Header = "Slide 3 Header"
+
+               }
+
+           };
+
+
+       class Item
+
+       {
+
+           public string Source { get; set; }
+
+           public string Alt { get; set; }
+
+           public string Caption { get; set; }
+
+           public string Header { get; set; }
+
+       }
+
 }
+
+ 

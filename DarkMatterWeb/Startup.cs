@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using DarkMatterWeb.Data;
 using Ganss.XSS;
 using System.IO;
+using BlazorStrap;
 using Microsoft.Extensions.FileProviders;
 using DarkMatterWeb.Services;
 
@@ -34,6 +35,7 @@ namespace DarkMatterWeb
             services.AddServerSideBlazor();
             services.AddSingleton(new AirTableService(Configuration));
             services.AddTransient<HtmlSanitizer>();
+            services.AddBootstrapCss();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
