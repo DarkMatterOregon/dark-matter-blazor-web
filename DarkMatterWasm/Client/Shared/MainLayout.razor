@@ -1,69 +1,76 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="main">
-    <div class="top-row justify-content-between image main-heading">
-        <img src="/images/logo.png" style="height: 40px;" class="heading-logo" />
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-                <img src="/images/line.png" style="height: 40px; align-self: center;" />
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="/showcase">Showcase</a>
-            </li>
-            <li class="nav-item">
-                <img src="/images/line.png" style="height: 40px; align-self: center;" />
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="/crew">Crew</a>
-            </li>
-            <li class="nav-item">
-                <img src="/images/line.png" style="height: 40px; align-self: center;" />
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="/contact">Contact</a>
-            </li>
-           
-        </ul>
-        
-    </div>
+   
+        <Layout class="main">
+            <LayoutHeader>
+                <div class="top-row justify-content-between image main-heading">
+                    <img src="/images/logo.png" style="height: 40px;" class="heading-logo" />
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="/images/line.png" style="height: 40px; align-self: center;" />
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/showcase">Showcase</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="/images/line.png" style="height: 40px; align-self: center;" />
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/crew">Crew</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="/images/line.png" style="height: 40px; align-self: center;" />
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/contact">Contact</a>
+                        </li>
 
-    <div>
-        @Body
-    </div>
-    <div class="footer">
-        <div class="bottom-row">
-            <div class="social-link-box">
-                <a href="https://www.facebook.com/darkmatterconsulting" target="_blank"><img class="social-logo" src="../images/facebook.png" alt="Facebook Logo"></a>
-                <img src="/images/line.jpg" Style="height: 40px; align-self: center;" />
-                <a href="https://www.linkedin.com/company/dark-matter-oregon/" target="_blank"><img class="social-logo" src="../images/linkedin.png" alt="Linkedin Logo"></a>
-            </div>
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <img src="/images/line.png" style="height: 40px; align-self: center;" />
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/showcase">Showcase</a>
-                </li>
-                <li class="nav-item">
-                    <img src="/images/line.png" style="height: 40px; align-self: center;" />
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/crew">Crew</a>
-                </li>
-                <li class="nav-item">
-                    <img src="/images/line.png" style="height: 40px; align-self: center;" />
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/contact">Contact</a>
-                </li>
-           
-            </ul>
-        </div>
-    </div>
-</div>
+                    </ul>
+
+                </div>
+            </LayoutHeader>
+            <LayoutContent>
+                <div>
+                    @Body
+                </div>
+            </LayoutContent>
+            <LayoutFooter>
+                <div class="footer">
+                    <div class="bottom-row">
+                        <div class="social-link-box">
+                            <a href="https://www.facebook.com/darkmatterconsulting" target="_blank"><img class="social-logo" src="../images/facebook.png" alt="Facebook Logo"></a>
+                            <img src="/images/line.jpg" Style="height: 40px; align-self: center;" />
+                            <a href="https://www.linkedin.com/company/dark-matter-oregon/" target="_blank"><img class="social-logo" src="../images/linkedin.png" alt="Linkedin Logo"></a>
+                        </div>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="/images/line.png" style="height: 40px; align-self: center;" />
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/showcase">Showcase</a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="/images/line.png" style="height: 40px; align-self: center;" />
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/crew">Crew</a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="/images/line.png" style="height: 40px; align-self: center;" />
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/contact">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </LayoutFooter>
+        </Layout>
+
