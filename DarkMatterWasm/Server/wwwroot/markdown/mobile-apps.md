@@ -1,0 +1,2 @@
+﻿## Mobile Apps
+It’s all about mobile. App-Store Apps in React Native. Progressive Web Apps in JavaScript, HTML and CSS. ASP.Net web apps that are mobile friendly will also run on larger screens of course.

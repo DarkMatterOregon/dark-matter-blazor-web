@@ -1,0 +1,887 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap');
+
+html, body {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*background-image: url("/images/starry-sky.jpg")*/
+    box-sizing: border-box;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #82A1B6;
+    border-color: #1861ac;
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+        HEADER NAVBAR
+*/
+.top-row {
+    display: flex;
+    align-items: center;
+    padding: 0 6rem;
+    height: 6.25rem;
+    z-index: 99;
+}
+
+.main {
+    flex: 1;
+    overflow: hidden;
+}
+
+    .main .top-row {
+        background-color: #000;
+        justify-content: flex-end;
+    }
+
+        .main .top-row > a, .main .top-row .btn-link {
+            white-space: nowrap;
+        }
+
+.main .top-row a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+    .sidebar .top-row {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .sidebar .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .sidebar .oi {
+        width: 2rem;
+        font-size: 1.1rem;
+        vertical-align: text-top;
+        top: -2px;
+    }
+
+    .sidebar .nav-item {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+
+        .sidebar .nav-item:first-of-type {
+            padding-top: 1rem;
+        }
+
+        .sidebar .nav-item:last-of-type {
+            padding-bottom: 1rem;
+        }
+
+        .sidebar .nav-item a {
+            color: #d7d7d7;
+            border-radius: 4px;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            line-height: 3rem;
+        }
+
+            .sidebar .nav-item a.active {
+                background-color: rgba(255,255,255,0.25);
+                color: white;
+            }
+
+            .sidebar .nav-item a:hover {
+                background-color: rgba(255,255,255,0.1);
+                color: white;
+            }
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    app {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .main .top-row {
+        position: sticky;
+        top: 0;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .sidebar .collapse {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+
+.navigation-item {
+    background-color: transparent;
+}
+
+.menu:not(.profile-menu){
+    background-color: transparent;
+}
+
+.menu:not(.profile-menu) .navigation-item-link{
+    color: white;
+    font-size: x-large;
+}
+
+.menu:not(.profile-menu) .navigation-item{
+    border-right-width: 1px;
+    border-right-color: white;
+}
+
+div.linebar{
+    background-image: url("line.jpg");
+}
+
+.bottom-row {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 6rem;
+}
+
+.footer {
+    flex: 1;
+    padding: 0rem;
+    border-top: none;
+    background-color: #672E31;
+}
+
+    .footer .bottom-row {
+        background-color: #672E31;
+        justify-content: space-between;
+    }
+
+        .footer .bottom-row > a, .main .bottom-row .btn-link {
+            white-space: nowrap;
+            margin-left: 1.5rem;
+        }
+
+        .footer .bottom-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+/* 
+        HOME PAGE
+*/
+div.index-section-1 {
+    background-image: url("/images/space-light.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-box {
+    margin-top: 15rem;
+}
+
+p{
+    margin-bottom: 0rem;
+}
+
+div.index-section-2 {
+    justify-content: center;
+    align-self: center;
+    background-color: white;
+    padding-left: 25rem;
+    padding-right: 25rem;
+}
+
+.inner-section{
+    padding-bottom: 5rem;
+}
+
+.inner-section > h1{
+    color: black;
+}
+.inner-section > p {
+    color: black;
+}
+
+div.index-section-3 {
+    background-image: url("/images/milky-way.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.index-section-3-block-top {
+    display: block;
+    width: 25%;
+    background-color: rgba(11, 11, 11, 0.4);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.index-section-3-block-bottom {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+    width: 40%;
+    background-color: rgba(11, 11, 11, 0.4);
+}
+
+div.index-section-4 {
+    background-color: white;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    display: flex;
+    height: 400px;
+}
+
+#box1{
+    z-index: 2;
+    position: absolute;
+}
+/*
+        CONTACT US PAGE 
+*/
+
+#contact-us-box1 {
+    z-index: 1;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    bottom: 50px;
+    background-color: #82A1B6;
+    width: 65rem;
+    height: 12rem;
+    margin-left: 10rem;
+    margin-top: 8rem;
+    padding-left: 7rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+}
+
+#contact-us-box2 {
+    min-height: 9.5rem;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #82A1B6;
+    padding: 1rem 4rem;
+}
+
+
+/*
+        CREW PAGE
+*/
+div.crew-section-1 {
+    background-image: url("/images/starry-sky.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover; 
+    height: 15.5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+div.crew-section-1 .header-primary {
+    padding-top: 1rem;
+}
+
+div.outer-crew {
+    padding-top: 2rem;
+    background-color: white;
+    min-height: 45rem;
+    position: relative;
+} 
+
+div.outer-crew .ui-g {
+    display: grid;
+    justify-self: middle;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    grid-gap: 1rem;
+    top: -7rem;
+    padding: 0 6rem;
+
+}
+
+div.crew-member-card {
+    align-self: center;
+    margin: 0 auto;
+    min-height: 15.5rem;
+    width: 15.5rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    padding: 1rem;
+    display: block;
+}
+
+/*
+        CONTACT PAGE
+*/
+
+div.contact-us-page {
+    position: relative;
+    height: 50rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+} 
+
+.custom-text-input:focus,
+.custom-text-area:focus {
+    outline: none; 
+    border: 2px solid #82A1B6;
+}
+
+.custom-text-input {
+    color: black;
+    background-color: white;
+    border-radius: 1px;
+    border-width: 1px;
+    border-color: black;
+    width: 19rem;
+    margin-right: 2rem;
+}
+
+.custom-text-area {
+    color: black;
+    background-color: white;
+    border-radius: 1px;
+    border-width: 1px;
+    border-color: black;
+    width: 40rem;
+    height: 20rem;
+}
+
+div.contact-us-send-button {
+    display: flex;
+    width: 40rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.contact-us-form .ui-button {
+    width: 40rem;
+}
+
+/* 
+        Brandon's changes
+*/
+
+/* Header */
+.main .top-row .justify-content-between .image {
+    width: 100%;
+}
+
+.main .top-row .justify-content-between .image img {
+padding: 3rem;
+}
+
+.main .top-row .navigation-item-wrapper, 
+.main .bottom-row .navigation-item-wrapper {
+    padding: 0 1.4rem;
+}
+
+.menu:not(.profile-menu) .navigation-item-link {
+    color: white;
+    font-size: 1.29rem;
+}
+
+
+
+/* 
+        HOME PAGE
+*/
+
+/* Showcase */
+div.index-section-1 {
+    height: 90vh;
+    padding: 3.5rem 6rem;
+}
+
+.header-primary {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+/* Who we are */
+div.index-section-2 {
+    padding: 3.5rem 6rem;
+}
+
+.header-primary--large {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.header-secondary {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.inner-section {
+    padding-bottom: 1.5rem;
+}
+
+.inner-section p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+/* Our Work */
+div.index-section-3 {
+    padding: 3.5rem 6rem;
+}
+
+div.index-section-3-block-top,
+div.index-section-3-block-bottom {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.54);
+}
+
+div.index-section-3-block-top {
+    width: 30%;
+}
+
+div.index-section-3-block-bottom {
+    width: 48.5%;
+}
+
+div.index-section-3-block-top h2,
+div.index-section-3-block-bottom h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+div.index-section-3-block-top p,
+div.index-section-3-block-bottom p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+/* CTA - ending */
+div.index-section-4 {
+    padding: 3.5rem 6rem;
+    position: relative;
+    height: 35rem;
+}
+
+.blank-row {
+    background-image: url(/images/space-light.jpg);
+    background-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7.5rem;
+    width: 100vw;
+}
+
+.cta-section {
+    width: 100%;
+    overflow: none;
+}
+
+#contact-us-box1 {
+    position: relative;
+    left: 80px;
+    max-width: 76.5%;
+    min-height: 17.8rem;
+    padding-left: 8rem;
+    padding-right: 6rem;
+}
+
+#contact-us-box1 p {
+    font-weight: 500;
+}
+
+.cta-btn{
+position: absolute;
+display: flex;
+flex-direction: column;
+bottom: 5rem;
+right: 12rem;
+}
+
+.cta-btn a {
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+/* footer */
+.bottom-row {
+    height: 6.25rem;
+}
+
+.social-logo {
+    padding: 0 1.4rem;
+    transition: all .2s ease;
+}
+    .social-logo:hover {
+        transform: scale(1.2);
+    }
+
+@media(max-width: 1350px) {
+    /* Home Page CTA */
+    .cta-btn {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    /* Our Work */
+    .section-box-container {
+        flex-direction: column;
+    }
+    div.index-section-3-block-top {
+        width: 100%;
+        display: block;
+    }
+    
+    div.index-section-3-block-bottom {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media(max-width: 992px) {
+    /* Home CTA section */
+    #contact-us-box1 {
+        min-height: 17rem;
+        margin-left: 5rem;
+        margin-top: 4rem;
+    }
+
+    #box1 {
+        width: 15.5rem;
+        height: 15.5rem;
+    }
+    
+    .header-primary--large {
+        font-size: 2rem;
+    }
+
+    /* Contact page */
+
+    div.outer-crew {
+        min-height: 60rem;
+    } 
+
+    div.outer-crew .ui-g {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    div.crew-member-card {
+        min-height: 15.5rem;
+        width: 20;
+    }
+}
+
+@media(max-width: 768px) {
+    /* Collapse Header Navbar */
+    .main-heading {
+        flex-direction: column;
+        min-height: 13rem;
+        padding: 1rem 2rem;
+    }
+
+    .top-row .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+    }
+        .top-row .menu img {
+        display: none;
+        }
+
+        .top-row.navigation-item {
+            display: block;
+            width: 100%;
+        }
+        .top-row .navigation-item:not(:last-child) {
+            border-bottom: 1px dotted #333;
+        }
+    
+    /* Showcase */
+    div.index-section-1 {
+        height: 80vh;
+        padding: 0 2rem;
+    }
+    .header-primary {
+        font-size: 1.7rem;
+    }
+    .showcase-box {
+        margin: 0;
+    }
+
+    /* Who we are */
+    div.index-section-2 {
+        padding: 3.5rem 2rem;
+    }
+
+    /* Our Work */
+    div.index-section-3 {
+        padding: 3.5rem 2rem;
+    }
+
+    /* Home Page CTA */
+    div.index-section-4 {
+        height: 45rem;
+    }
+
+    #box1 {
+        display: block;
+    }
+
+    #contact-us-box1 {
+        min-height: 23rem;
+        margin: 0;
+        padding: 5rem 1rem;
+        margin-top: 8rem;
+    }
+
+    #contact-us-box2 {
+        padding: 1rem;
+    }
+
+    .cta-btn {
+        bottom: 1rem;
+        right: 30%;
+    }
+
+        .cta-btn a {
+            font-size: 1rem;
+        }
+
+        .cta-btn img {
+            width: 6rem;
+            height: .5rem;
+        }
+
+        /* crew page */
+
+    div.crew-section-1 .header-primary {
+        text-align: center;
+    }
+
+    div.outer-crew {
+        min-height: 110rem;
+    } 
+
+        div.outer-crew .ui-g {
+            grid-template-columns: 1fr;
+        }
+    
+            div.crew-member-card {
+                min-height: 15.5rem;
+                width: 15.5rem;
+            }
+
+    /*
+        CONTACT PAGE
+    */
+
+    div.contact-us-page {
+        height: 60rem;
+    } 
+
+    .custom-text-input,
+    .contact-us-form .ui-button {
+        display: block;
+        width: 60%;
+        text-align: center;
+    }
+
+    .textbox {
+        margin: 0 auto;
+    }
+
+    .textbox:nth-child(even) {
+        margin-left: 8rem;
+    }
+
+    .custom-text-input:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+
+
+    .custom-text-area {
+        width: 60%;
+        margin: 0 auto;
+        height: 20rem;
+    }
+
+
+
+    div.contact-us-send-button {
+        display: flex;
+        width: 40rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    /* Stack social links / nav in footer */
+    .footer .bottom-row {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 7rem;
+    }
+
+
+    /* med added blazor-carousel*/
+    .blazor-carousel {
+        width: 100%;
+        min-height: 100%;
+        background-color: black;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .blazor-carousel-inner {
+        padding: 0;
+        margin: 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .blazor-carousel-image {
+        padding: 0;
+        margin: 0;
+    }
+
+    .blazor-carousel-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .blazor-carousel-indicators-container, .blazor-carousel-arrow-container {
+        display: inline-block;
+        height: 30px;
+    }
+
+    .blazor-carousel-indicator {
+        vertical-align: middle;
+        height: 28px;
+    }
+
+    .blazor-carousel-indicator {
+        list-style: none;
+        width: 20px;
+        height: 5px;
+        background-color: white;
+        margin-right: 5px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .blazor-carousel-indicator-active {
+        background-color: cornflowerblue;
+    }
+
+    .blazor-carousel-nav-container {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        position: relative;
+        bottom: 0px;
+        left: 0;
+    }
+
+    .blazor-carousel-control-next {
+        padding-left: 10px;
+    }
+
+    .blazor-carousel-control-prev {
+        padding-right: 10px;
+    }
+
+    .blazor-carousel-control-nav {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    .blazor-carousel-pointer {
+        cursor: pointer;
+    }
+    /* end added blazor-carousel*/
+}

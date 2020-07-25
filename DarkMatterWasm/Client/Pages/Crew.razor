@@ -1,0 +1,41 @@
+﻿@page "/crew"
+@using System.IO
+@using System.Reflection
+@using System.Text
+@using DarkMatterWasm.Shared.Models
+
+@inject HttpClient Http
+
+<div class="crew-section-1">
+    <h1 class="header-primary header-primary--large">Meet the Crew</h1>
+</div>
+
+@if (CrewMembers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    @foreach (var crew in CrewMembers)
+    {
+        <Row>
+            <Column ColumnSize="ColumnSize.Is3">
+                <Member CrewMember="@crew"/>
+            </Column>
+        </Row>
+    }
+}
+
+@code {
+
+    private CrewMember[] CrewMembers;
+
+    protected async override Task OnInitializedAsync()
+    {
+
+        CrewMembers = await Http.GetFromJsonAsync<CrewMember[]>("api/Crew");
+    }
+
+
+}

@@ -1,0 +1,84 @@
+﻿@page "/showcase"
+@using System.IO
+@using System.Reflection
+@using System.Text
+@using System.Collections;
+@using System.IO;
+
+
+<h1 style="margin-left: 5rem;">Showcase</h1>
+<Carousel >
+    @foreach (var item in items)
+    {
+        <CarouselSlide Name="1">
+            <Image Source="@item.Source" Text="City Skyline" Display="Display.Block" Style="width: 100%;" />
+        </CarouselSlide>
+    }
+
+</Carousel>
+
+@code {
+
+           IList<Item> items = new List<Item>
+
+           {
+
+               new Item
+               {
+
+                   Source = "...First Slide",
+
+                   Alt = "First Slide",
+
+                   Caption = "Slide 1",
+
+                   Header = "Slide 1 Header"
+
+               },
+
+               new Item
+               {
+
+                   Source = "...Second Slide",
+
+                   Alt = "Second Slide",
+
+                   Caption = "Slide 2",
+
+                   Header = "Slide 2 Header"
+
+               },
+
+               new Item
+               {
+
+                   Source = "...Third Slide",
+
+                   Alt = "Third Slide",
+
+                   Caption = "Slide 3",
+
+                   Header = "Slide 3 Header"
+
+               }
+
+           };
+
+
+       class Item
+
+       {
+
+           public string Source { get; set; }
+
+           public string Alt { get; set; }
+
+           public string Caption { get; set; }
+
+           public string Header { get; set; }
+
+       }
+
+}
+
+ 

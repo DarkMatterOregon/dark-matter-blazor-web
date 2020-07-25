@@ -1,0 +1,61 @@
+﻿@page "/contact"
+@using System.IO
+@using System.Reflection
+@using System.Text
+@using DarkMatterWasm.Shared.Models
+@inject HttpClient Http
+
+<div class="crew-section-1">
+
+</div>
+
+
+<div class="contact-us-page">
+    <div id="contact-us-box2">
+        <h1 class="header-primary header-primary--large">Contact Us</h1>
+        <p>Give us a shout. We would love to hear from you</p>
+    </div>
+
+    @if (_messageSent)
+    {
+        <h4 style="color: black; text-align: center; width: 40rem;">Thanks! We'll hit you back soon.</h4>
+    }
+    else
+    {
+        <div class="contact-us-form">
+            <TextEdit  class="custom-text-input" Placeholder="Name" @bind-Text="contact.Name" />
+            <TextEdit  class="custom-text-input email-input" style="margin-right: 0;" Placeholder="Email" @bind-TExt="contact.Email" />
+            <div class="contact-phone-company-box" style="margin-top: 1rem;">
+                <TextEdit  class="custom-text-input" Placeholder="Phone Number (optional)" @bind-Text="contact.Phone" />
+                <TextEdit  class="custom-text-input company-name-input" style="margin-right: 0;" Placeholder="Company Name (optional)" @bind-Text="contact.Company" />
+            </div>
+            <div style="display: flex; flex-wrap: wrap; margin-top: 2rem;">
+                <TextEdit  class="custom-text-area" @bind-Text="contact.Message" />
+            </div>
+            <div class="contact-us-send-button">
+                <Button Text="Send" Clicked="@Send" />
+            </div>
+        </div>
+    }
+</div>
+
+
+@code {
+
+
+    private bool _messageSent = false;
+    private Contact contact;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    private async void Send()
+    {
+
+        var response =  await Http.PostAsJsonAsync("Contact",contact);
+
+        _messageSent = true;
+    }
+}
