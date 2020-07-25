@@ -1,0 +1,2 @@
+﻿## Business Apps in the Cloud
+Cloud Apps, aka Web Apps, Web APIs, & Mobile Back-Ends. Not much to look at, but they get the job done. We build infrastructure in Azure and AWS using Serverless and Docker. We specialize in taking monolithic server apps and re-tooling them for the cloud, often with substantial cost savings.

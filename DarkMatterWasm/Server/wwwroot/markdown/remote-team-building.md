@@ -1,0 +1,2 @@
+﻿## Remote Team Building
+We are remote team builders. Our projects are distributed and staffed by digital natives. We stay in constant contact using chat and cloud based project management tools. Trained as Mozilla Open Leaders, our leads have skills building empathy and creating inclusive environments for collaboration. We can help you build a world-class remote work culture.
