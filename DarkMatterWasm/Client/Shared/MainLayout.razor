@@ -1,30 +1,27 @@
 ﻿@inherits LayoutComponentBase
-
-   
-        <Layout class="main">
-            <LayoutHeader>
-                <div class="top-row justify-content-between image main-heading">
-                    <Image Source="/images/logo.png" style="height: 40px;" class="heading-logo" />
-                    <Menu/>
-
+<Layout class="main">
+    <LayoutHeader>
+        <div class="top-row justify-content-between image main-heading">
+            <Image Source="/images/logo.png" style="height: 40px;" class="heading-logo" />
+            <Menu/>
+        </div>
+    </LayoutHeader>
+    <LayoutContent>
+        <div>
+            @Body
+        </div>
+    </LayoutContent>
+    <LayoutFooter>
+        <div class="footer">
+            <div class="bottom-row">
+                <div class="social-link-box">
+                    <a href="https://www.facebook.com/darkmatterconsulting" target="_blank"><img class="social-logo" src="../images/facebook.png" alt="Facebook Logo"></a>
+                    <img src="/images/line.jpg" Style="height: 40px; align-self: center;" />
+                    <a href="https://www.linkedin.com/company/dark-matter-oregon/" target="_blank"><img class="social-logo" src="../images/linkedin.png" alt="Linkedin Logo"></a>
                 </div>
-            </LayoutHeader>
-            <LayoutContent>
-                <div>
-                    @Body
-                </div>
-            </LayoutContent>
-            <LayoutFooter>
-                <div class="footer">
-                    <div class="bottom-row">
-                        <div class="social-link-box">
-                            <a href="https://www.facebook.com/darkmatterconsulting" target="_blank"><img class="social-logo" src="../images/facebook.png" alt="Facebook Logo"></a>
-                            <img src="/images/line.jpg" Style="height: 40px; align-self: center;" />
-                            <a href="https://www.linkedin.com/company/dark-matter-oregon/" target="_blank"><img class="social-logo" src="../images/linkedin.png" alt="Linkedin Logo"></a>
-                        </div>
-                        <Menu/>
-                    </div>
-                </div>
-            </LayoutFooter>
-        </Layout>
+                <Menu/>
+            </div>
+        </div>
+    </LayoutFooter>
+</Layout>
 

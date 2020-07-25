@@ -48,10 +48,10 @@ app {
             white-space: nowrap;
         }
 
-        .main .top-row a:first-child {
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+.main .top-row a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
@@ -136,12 +136,12 @@ app {
     z-index: 1000;
 }
 
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
 
 @media (min-width: 768px) {
     app {
@@ -174,21 +174,21 @@ app {
     background-color: transparent;
 }
 
-.menu:not(.profile-menu) {
+.menu:not(.profile-menu){
     background-color: transparent;
 }
 
-    .menu:not(.profile-menu) .navigation-item-link {
-        color: white;
-        font-size: x-large;
-    }
+.menu:not(.profile-menu) .navigation-item-link{
+    color: white;
+    font-size: x-large;
+}
 
-    .menu:not(.profile-menu) .navigation-item {
-        border-right-width: 1px;
-        border-right-color: white;
-    }
+.menu:not(.profile-menu) .navigation-item{
+    border-right-width: 1px;
+    border-right-color: white;
+}
 
-div.linebar {
+div.linebar{
     background-image: url("line.jpg");
 }
 
@@ -229,8 +229,8 @@ div.index-section-1 {
     background-image: url("/images/space-light.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-size: cover; 
+    background-position: center; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +240,7 @@ div.index-section-1 {
     margin-top: 15rem;
 }
 
-p {
+p{
     margin-bottom: 0rem;
 }
 
@@ -252,17 +252,16 @@ div.index-section-2 {
     padding-right: 25rem;
 }
 
-.inner-section {
+.inner-section{
     padding-bottom: 5rem;
 }
 
-    .inner-section > h1 {
-        color: black;
-    }
-
-    .inner-section > p {
-        color: black;
-    }
+.inner-section > h1{
+    color: black;
+}
+.inner-section > p {
+    color: black;
+}
 
 div.index-section-3 {
     background-image: url("/images/milky-way.jpg");
@@ -278,7 +277,6 @@ div.index-section-3 {
     padding: 1rem;
     margin-bottom: 2rem;
 }
-
 .index-section-3-block-bottom {
     padding: 1rem;
     margin-bottom: 2rem;
@@ -295,7 +293,7 @@ div.index-section-4 {
     height: 400px;
 }
 
-#box1 {
+#box1{
     z-index: 2;
     position: absolute;
 }
@@ -340,35 +338,36 @@ div.crew-section-1 {
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
     height: 15.5rem;
     padding-left: 6rem;
     padding-right: 6rem;
 }
 
-    div.crew-section-1 .header-primary {
-        padding-top: 1rem;
-    }
+div.crew-section-1 .header-primary {
+    padding-top: 1rem;
+}
 
 div.outer-crew {
     padding-top: 2rem;
     background-color: white;
     min-height: 45rem;
     position: relative;
-}
+} 
 
-    div.outer-crew .ui-g {
-        display: grid;
-        justify-self: middle;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
-        position: absolute;
-        grid-gap: 1rem;
-        top: -7rem;
-        padding: 0 6rem;
-    }
+div.outer-crew .ui-g {
+    display: grid;
+    justify-self: middle;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    grid-gap: 1rem;
+    top: -7rem;
+    padding: 0 6rem;
+
+}
 
 div.crew-member-card {
     align-self: center;
@@ -393,11 +392,11 @@ div.contact-us-page {
     justify-content: center;
     align-content: center;
     align-items: center;
-}
+} 
 
 .custom-text-input:focus,
 .custom-text-area:focus {
-    outline: none;
+    outline: none; 
     border: 2px solid #82A1B6;
 }
 
@@ -441,11 +440,11 @@ div.contact-us-send-button {
     width: 100%;
 }
 
-    .main .top-row .justify-content-between .image img {
-        padding: 3rem;
-    }
+.main .top-row .justify-content-between .image img {
+padding: 3rem;
+}
 
-.main .top-row .navigation-item-wrapper,
+.main .top-row .navigation-item-wrapper, 
 .main .bottom-row .navigation-item-wrapper {
     padding: 0 1.4rem;
 }
@@ -470,6 +469,7 @@ div.index-section-1 {
 .header-primary {
     font-weight: 800;
     font-size: 2rem;
+    color: #ffffff;
 }
 
 
@@ -492,11 +492,11 @@ div.index-section-2 {
     padding-bottom: 1.5rem;
 }
 
-    .inner-section p {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1.2rem;
-        line-height: 1.1;
-    }
+.inner-section p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
 
 /* Our Work */
 div.index-section-3 {
@@ -517,19 +517,19 @@ div.index-section-3-block-bottom {
     width: 48.5%;
 }
 
-    div.index-section-3-block-top h2,
-    div.index-section-3-block-bottom h2 {
-        font-size: 1.3rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-    }
+div.index-section-3-block-top h2,
+div.index-section-3-block-bottom h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
 
-    div.index-section-3-block-top p,
-    div.index-section-3-block-bottom p {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1.15rem;
-        line-height: 1;
-    }
+div.index-section-3-block-top p,
+div.index-section-3-block-bottom p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.15rem;
+    line-height: 1;
+}
 
 /* CTA - ending */
 div.index-section-4 {
@@ -562,23 +562,23 @@ div.index-section-4 {
     padding-right: 6rem;
 }
 
-    #contact-us-box1 p {
-        font-weight: 500;
-    }
-
-.cta-btn {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: 5rem;
-    right: 12rem;
+#contact-us-box1 p {
+    font-weight: 500;
 }
 
-    .cta-btn a {
-        color: #000;
-        font-size: 1.2rem;
-        margin-bottom: .5rem;
-    }
+.cta-btn{
+position: absolute;
+display: flex;
+flex-direction: column;
+bottom: 5rem;
+right: 12rem;
+}
+
+.cta-btn a {
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
 
 /* footer */
 .bottom-row {
@@ -589,7 +589,6 @@ div.index-section-4 {
     padding: 0 1.4rem;
     transition: all .2s ease;
 }
-
     .social-logo:hover {
         transform: scale(1.2);
     }
@@ -607,12 +606,11 @@ div.index-section-4 {
     .section-box-container {
         flex-direction: column;
     }
-
     div.index-section-3-block-top {
         width: 100%;
         display: block;
     }
-
+    
     div.index-section-3-block-bottom {
         width: 100%;
         display: block;
@@ -631,7 +629,7 @@ div.index-section-4 {
         width: 15.5rem;
         height: 15.5rem;
     }
-
+    
     .header-primary--large {
         font-size: 2rem;
     }
@@ -640,12 +638,12 @@ div.index-section-4 {
 
     div.outer-crew {
         min-height: 60rem;
+    } 
+
+    div.outer-crew .ui-g {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-        div.outer-crew .ui-g {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
+    
     div.crew-member-card {
         min-height: 15.5rem;
         width: 20;
@@ -666,30 +664,26 @@ div.index-section-4 {
         text-align: center;
         background-color: #000;
     }
-
         .top-row .menu img {
-            display: none;
+        display: none;
         }
 
-    .top-row.navigation-item {
-        display: block;
-        width: 100%;
-    }
-
+        .top-row.navigation-item {
+            display: block;
+            width: 100%;
+        }
         .top-row .navigation-item:not(:last-child) {
             border-bottom: 1px dotted #333;
         }
-
+    
     /* Showcase */
     div.index-section-1 {
         height: 80vh;
         padding: 0 2rem;
     }
-
     .header-primary {
         font-size: 1.7rem;
     }
-
     .showcase-box {
         margin: 0;
     }
@@ -738,7 +732,7 @@ div.index-section-4 {
             height: .5rem;
         }
 
-    /* crew page */
+        /* crew page */
 
     div.crew-section-1 .header-primary {
         text-align: center;
@@ -746,16 +740,16 @@ div.index-section-4 {
 
     div.outer-crew {
         min-height: 110rem;
-    }
+    } 
 
         div.outer-crew .ui-g {
             grid-template-columns: 1fr;
         }
-
-    div.crew-member-card {
-        min-height: 15.5rem;
-        width: 15.5rem;
-    }
+    
+            div.crew-member-card {
+                min-height: 15.5rem;
+                width: 15.5rem;
+            }
 
     /*
         CONTACT PAGE
@@ -763,7 +757,7 @@ div.index-section-4 {
 
     div.contact-us-page {
         height: 60rem;
-    }
+    } 
 
     .custom-text-input,
     .contact-us-form .ui-button {
@@ -776,9 +770,9 @@ div.index-section-4 {
         margin: 0 auto;
     }
 
-        .textbox:nth-child(even) {
-            margin-left: 8rem;
-        }
+    .textbox:nth-child(even) {
+        margin-left: 8rem;
+    }
 
     .custom-text-input:not(:last-child) {
         margin-bottom: 1rem;
@@ -833,10 +827,10 @@ div.index-section-4 {
         margin: 0;
     }
 
-        .blazor-carousel-image img {
-            width: 100%;
-            height: 100%;
-        }
+    .blazor-carousel-image img {
+        width: 100%;
+        height: 100%;
+    }
 
     .blazor-carousel-indicators-container, .blazor-carousel-arrow-container {
         display: inline-block;
