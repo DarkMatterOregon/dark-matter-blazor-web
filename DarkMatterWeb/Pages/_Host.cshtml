@@ -1,9 +1,7 @@
 ﻿@page "/"
 @namespace DarkMatterWeb.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@{
-    Layout = null;
-}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +11,8 @@
     <title>Dark Matter Consulting</title>
     <base href="~/" />
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <link rel="stylesheet" href="_content/Radzen.Blazor/css/dark.css" />
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/dark-base.css" />
     <link href="css/site.css" rel="stylesheet" />
-    <link rel="stylesheet" href="_content/BlazorStrap/css/submenu.css" />
-    <script src="_content/BlazorStrap/blazorStrap.js"></script>
 </head>
 <body>
     <app>
@@ -37,6 +33,7 @@
     <script src="_framework/blazor.server.js"></script>
    
 <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+<script src="_content/BlazorStrap/blazorStrap.js"></script>
 
 </body>
 </html>

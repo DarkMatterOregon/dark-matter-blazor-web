@@ -1,22 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using DarkMatterWeb.Data;
-using Ganss.XSS;
-using System.IO;
-using BlazorStrap;
-using Microsoft.Extensions.FileProviders;
-using DarkMatterWeb.Services;
+using System.Linq;
 
-namespace DarkMatterWeb
+namespace DarkMatterWasm.Server
 {
     public class Startup
     {
@@ -31,11 +22,9 @@ namespace DarkMatterWeb
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddServerSideBlazor();
-            services.AddBootstrapCss();
-            services.AddSingleton(new AirTableService(Configuration));
-            services.AddTransient<HtmlSanitizer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +33,7 @@ namespace DarkMatterWeb
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseWebAssemblyDebugging();
             }
             else
             {
@@ -53,14 +43,16 @@ namespace DarkMatterWeb
             }
 
             app.UseHttpsRedirection();
+            app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapBlazorHub();
-                endpoints.MapFallbackToPage("/_Host");
+                endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                endpoints.MapFallbackToFile("index.html");
             });
         }
     }
