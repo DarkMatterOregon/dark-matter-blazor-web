@@ -10,25 +10,31 @@
     <h1 class="header-primary header-primary--large">Meet the Crew</h1>
 </div>
 
-@foreach (var crew in CrewMembers)
+@if (CrewMembers == null)
 {
-    <Row>
-        <Column ColumnSize="ColumnSize.Is3">
-            <Member CrewMember="@crew" />
-        </Column>
-    </Row>
+    <p><em>Loading...</em></p>
 }
+else
+{
 
+    @foreach (var crew in CrewMembers)
+    {
+        <Row>
+            <Column ColumnSize="ColumnSize.Is3">
+                <Member CrewMember="@crew"/>
+            </Column>
+        </Row>
+    }
+}
 
 @code {
 
     private CrewMember[] CrewMembers;
 
-
     protected async override Task OnInitializedAsync()
     {
 
-        CrewMembers = await Http.GetFromJsonAsync<CrewMember[]>("Crew");
+        CrewMembers = await Http.GetFromJsonAsync<CrewMember[]>("api/Crew");
     }
 
 

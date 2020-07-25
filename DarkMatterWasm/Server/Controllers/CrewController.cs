@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 namespace DarkMatterWasm.Server.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CrewController : ControllerBase
     {
         
