@@ -351,3 +351,5 @@ MigrationBackup/
 
 DarkMatterWeb/.vscode/
 *.DS_Store
+
+DarkMatterWasm/.vscode/

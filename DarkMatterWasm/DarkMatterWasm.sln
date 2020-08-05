@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkMatterWasm.Server", "Server\DarkMatterWasm.Server.csproj", "{7FC0876D-0A96-4A38-A2A3-66BB8D0580D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkMatterWasm.Server", "Server\DarkMatterWasm.Server.csproj", "{7FC0876D-0A96-4A38-A2A3-66BB8D0580D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkMatterWasm.Client", "Client\DarkMatterWasm.Client.csproj", "{A4D506E5-223D-4DC0-A6EF-8E733C7543B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkMatterWasm.Client", "Client\DarkMatterWasm.Client.csproj", "{A4D506E5-223D-4DC0-A6EF-8E733C7543B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkMatterWasm.Shared", "Shared\DarkMatterWasm.Shared.csproj", "{D0903B52-047D-404A-99BD-460206EB6949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkMatterWasm.Shared", "Shared\DarkMatterWasm.Shared.csproj", "{D0903B52-047D-404A-99BD-460206EB6949}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09205D4C-9A41-47A8-90B3-29D2DC8C872D}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		prod-deploy.yml = prod-deploy.yml
+		prod-service.yml = prod-service.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
