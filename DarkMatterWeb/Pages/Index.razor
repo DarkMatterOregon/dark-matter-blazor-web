@@ -3,53 +3,96 @@
 @using System.Reflection
 @using System.Text
 
+@* Section 1 : Showcase *@
 <div class="index-section-1">
-    <div class="showcase-box">
-        <h1 class="header-primary" style="text-align: center">Your remote developer team.</h1>
-        <h1 class="header-primary" style="text-align: center">Experts in Cloud, Mobile, .NET, & Blazor.</h1>
+    <div class="container-fluid home-showcase vh-100 text-white">
+        <div class="row h-50"></div>
+        <div class="row h-50">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <h1 class="text-center">Your remote developer team. Experts in Cloud, Mobile, .NET, & Blazor</h1>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
     </div>
 </div>
 
+@* Section 2: Who We Are *@
 <div class="index-section-2">
-    <div class="inner-section">
-        <h1 class="header-primary header-primary--large">Who we are</h1>
+    <div class="container py-4 home-section-1">
+        <h2>Who we are</h2>
         <p>Eugene’s craftiest C#, Web, Mobile, and Cloud development consultancy. Our founders bring more than 30 years of collective experience in building .NET infrastructure. We’ve worked with industry leaders, state & local governments as well as private enterprise large and small. Founded in 2016 to fill a gap in regional C# knowledge, we've expanded lately to embrace popular trends in open web and mobile as well as adding developers with diverse skill sets.</p>
-    </div>
-    <div class="inner-section">
-        <h1 class="header-secondary">What we do</h1>
+
+        <h3>What we do</h3>
         <p>We build teams custom fitted to the specific needs of your project. Our developers have deep platform knowledge in C# and .Net to support your existing systems as well as embracing the latest trends in mobile and cloud computing for your next adventure. We employ local Oregon developers who enjoy the quality of life in Eugene, Oregon.</p>
-    </div>
-    <div class="inner-section">
-        <h1 class="header-secondary">OPEN TOOLS AND OPEN LEADERSHIP</h1>
+
+        <h3>OPEN TOOLS AND OPEN LEADERSHIP</h3>
         <p>We build teams custom fitted to the specific needs of your project. Our developers have deep platform knowledge in C# and .Net to support your existing systems as well as embracing the latest trends in mobile and cloud computing for your next adventure. We employ local Oregon developers who enjoy the quality of life in Eugene, Oregon.</p>
     </div>
 </div>
 
+@* Section 3: Our Work *@
 <div class="index-section-3">
-    <h1 class="header-primary header-primary--large">Our Work</h1>
-    <div class="section-box-container" style="display: flex; justify-content: space-between">
-        <div class="index-section-3-block-top">
-            <MarkdownView Content="remote-team-building.md"></MarkdownView>
-        </div>
-        <div class="index-section-3-block-top">
-            <MarkdownView Content="business-apps-in-the-cloud.md"></MarkdownView>
-        </div>
-        <div class="index-section-3-block-top">
-            <MarkdownView Content="mobile-apps.md"></MarkdownView>
-        </div>
-    </div>
-    <div class="section-box-container" style="display: flex; justify-content: space-between">
-        <div class="index-section-3-block-bottom">
-            <MarkdownView Content="we-love-dot-net.md"></MarkdownView>
-        </div>
-        <div class="index-section-3-block-bottom">
-            <MarkdownView Content="blazor-is-the-future.md"></MarkdownView>
+    <div class="container-fluid py-4 home-section-2 text-white">
+        <div class="container">
+            <h2>Our Work</h2>
+
+            <div class="row justify-content-around">
+                <div class="col-lg-3 my-4 bg-dark-trans p-4">
+                    <MarkdownView Content="remote-team-building.md"></MarkdownView>
+                </div>
+
+                <div class="col-lg-3 my-4 bg-dark-trans p-4">
+                    <MarkdownView Content="business-apps-in-the-cloud.md"></MarkdownView>
+                </div>
+
+                <div class="col-lg-3 my-4 bg-dark-trans p-4">
+                    <MarkdownView Content="mobile-apps.md"></MarkdownView>
+                </div>
+            </div>
+
+            <div class="row justify-content-around">
+                <div class="col-lg-5 bg-dark-trans my-4 p-4">
+                    <MarkdownView Content="we-love-dot-net.md"></MarkdownView>
+                </div>
+
+                <div class="col-lg-5 bg-dark-trans my-4 p-4">
+                    <MarkdownView Content="blazor-is-the-future.md"></MarkdownView>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="index-section-4">
-    <div class="blank-row image ">&nbsp;</div>
+    <div class="fluid-container">
+        <div class="row blank-row image"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img id="box1" src="/images/logo-box.jpg" width="350" height="350" style="z-index: 2" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mx-auto" id="contact-us-box1"> 
+                <h1 class="header-primary header-primary--large">Our team is here to help</h1>
+                <p>Shoot us a message and tell us about your project!</p>
+                <div class="cta-btn">
+                    <NavLink href="contact">
+                        Contact Page
+                    </NavLink>
+                    <img src="/images/arrow.png" width="150" height="20"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    @* <div class="blank-row image ">&nbsp;</div>
     <div style="position: relative" class="cta-section">
         <img id="box1" src="/images/logo-box.jpg" width="350" height="350" style="z-index: 2" />
         <div id="contact-us-box1">
@@ -62,5 +105,5 @@
                 <img src="/images/arrow.png" width="150" height="20"/>
             </div>
         </div>
-    </div>
+    </div> *@
 </div>

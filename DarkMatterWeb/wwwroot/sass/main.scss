@@ -1,0 +1,11 @@
+// Functions - Import these first!
+@import '../node_modules/bootstrap/scss/functions';
+
+// Custom theme (overwriting bootstrap variables --functions required for this to work)
+@import '../sass/custom-variables';
+
+// Full bootstrap 
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Custom theme styleing
+@import '../sass/theme'; 

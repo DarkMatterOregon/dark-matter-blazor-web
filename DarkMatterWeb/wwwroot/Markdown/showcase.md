@@ -1,4 +1,4 @@
-﻿## Sample Showcase text!
+﻿### Sample Showcase text!
 
 This is your site!  You can make it better!  
 
