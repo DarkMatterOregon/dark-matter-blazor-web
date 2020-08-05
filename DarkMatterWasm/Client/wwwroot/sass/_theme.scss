@@ -1,0 +1,111 @@
+// Typography
+//
+p {
+  //get the correct font
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2, h3 {
+  font-weight: 900;
+}
+
+// Sections
+//
+// Home Page
+.home {
+  // Showcase
+  &-showcase {
+  background-image: url(../images/space-light.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  }
+
+  // Section 2
+  &-section-2 {
+    background-image: url(../images/milky-way.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+}
+
+// Section 4 
+.index-section-4 { 
+  min-height: 40rem;
+
+  .blank-row {
+    background-image: url(../images/space-light.jpg);
+    height: 6rem;
+  }
+
+  #box1 {
+    @media only screen and (max-width: 767.98px) {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  #contact-us-box1 {
+    z-index: -1;
+    width: 65rem;
+    height: 15rem;
+    padding-left: 6rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    transform: translate(-1rem, -8rem); 
+
+    @media only screen and (max-width: 1199.98px) {
+      transform: translate(4rem, -8rem);
+      height: 17rem;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+      transform: translate(8rem, -8rem);
+      height: 25rem;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+      transform: translate(0, 0);
+      height: 15rem;
+      flex: 1; 
+      max-width: 90%;
+      padding: 1rem;
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+
+
+
+
+
+// div.index-section-4 {
+//   background-color: white;
+//   padding-left: 25rem;
+//   padding-right: 25rem;
+//   display: flex;
+//   height: 400px;
+// }
+
+// #box1{
+//   z-index: 2;
+//   position: absolute;
+// }
+
+// #contact-us-box1 {
+//   z-index: 1;
+//   position: absolute;
+//   left: 50px;
+//   top: 50px;
+//   bottom: 50px;
+//   background-color: #82A1B6;
+//   width: 65rem;
+//   height: 12rem;
+//   margin-left: 10rem;
+//   margin-top: 8rem;
+//   padding-left: 7rem;
+//   padding-right: 3rem;
+//   padding-top: 1rem;
+// }
