@@ -7,19 +7,17 @@
 
 // Reset
 html, body {
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /*background-image: url("/images/starry-sky.jpg")*/
-    box-sizing: border-box;
+    font-family: $font-family-sans-serif;
 }
 
 h2, h3 {
-  font-weight: 900;
+  font-weight: $font-weight-bolder;
 }
 
 p {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.2rem;
-  line-height: 1.1;
+  font-family: $font-family-serif;
+  font-size: $font-size-lg;
+  line-height: $line-height-xs;
 }
 
 //      HOME PAGE     //
@@ -37,12 +35,18 @@ p {
   height: 90vh;
 }
 
+// Home: Section 2
+.index-section-2 {
+  padding: 2rem 0;
+}
+
 // Home: Section 3
 .index-section-3 {
   background-image: url("/images/milky-way.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  padding: 2rem 0;
 }
 
 // Home: Section 4
