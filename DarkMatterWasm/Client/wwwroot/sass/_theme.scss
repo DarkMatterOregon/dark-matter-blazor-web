@@ -92,12 +92,10 @@ p {
 }
 
 
-
-
 /*
         CREW PAGE
 */
-div.crew-section-1 {
+.crew-section-1 {
     background-image: url("/images/starry-sky.jpg");
     background-repeat: no-repeat;
     background-position: top;
@@ -107,41 +105,23 @@ div.crew-section-1 {
     padding-left: 6rem;
     padding-right: 6rem;
 }
+.crew-section-2 {
+  padding: 2rem 0;
 
-div.crew-section-1 .header-primary {
-    padding-top: 1rem;
-}
-
-div.outer-crew {
-    padding-top: 2rem;
-    background-color: white;
-    min-height: 45rem;
-    position: relative;
-} 
-
-div.outer-crew .ui-g {
-    display: grid;
-    justify-self: middle;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    position: absolute;
-    grid-gap: 1rem;
-    top: -7rem;
-    padding: 0 6rem;
-
-}
-
-div.crew-member-card {
+  .crew-member-card {
     align-self: center;
-    margin: 0 auto;
     min-height: 15.5rem;
     width: 15.5rem;
     border: 2px solid #000;
     background-color: #fff;
     padding: 1rem;
-    display: block;
+    display: inline-block;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+
 }
 
 
