@@ -2,6 +2,9 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap');
 
+// Default blazor app styles
+@import '../sass/app'; 
+
 // Reset
 html, body {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -19,66 +22,70 @@ p {
   line-height: 1.1;
 }
 
-/* 
-        HOME PAGE
-*/
+//      HOME PAGE     //
 
 // Home: Section 1
 .index-section-1 {
-    background-image: url("/images/space-light.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-    background-position: center; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+  background-image: url("/images/space-light.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
 
 // Home: Section 3
 .index-section-3 {
-    background-image: url("/images/milky-way.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background-image: url("/images/milky-way.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 // Home: Section 4
 .index-section-4 {
   padding: 3.5rem 6rem;
   position: relative;
-  height: 35rem;
+  min-height: 40rem;
+
+  .blank-row {
+    background-image: url(/images/space-light.jpg);
+    background-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7.5rem;
+    width: 100vw;
+  }
 
   #contact-us-box1 {
-    position: relative;
-    left: 80px;
-    max-width: 76.5%;
-    min-height: 17.8rem;
-    padding-left: 8rem;
-    padding-right: 6rem;
+    min-height: 20rem; 
+    padding: 2rem 6rem 2rem 9rem;
+    margin-top: -8rem;
+    z-index: -1;
 
-    p {
-      font-weight: 500;
+
+    @media(max-width: 1199.98px){
+      transform: translateX(2rem);
+    }
+
+    @media(max-width: 991.98px){
+      padding-left: 6rem;
+      padding-right: 4rem;
+      transform: translateX(3rem);
+    }
+
+    @media(max-width: 767.98px){
+      padding: 2rem;
+      margin-top: 0;
+      width: 20rem;
     }
   }
 
-  .cta-btn{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: 5rem;
-    right: 12rem;
-  }
-
-  .cta-btn a {
-    color: #000;
-    font-size: 1.2rem;
-    margin-bottom: .5rem;
-  }
 }
-
-
 
 
 
@@ -197,18 +204,14 @@ div.contact-us-send-button {
   padding: 1rem 4rem;
 }
 
-/* footer */
-.bottom-row {
-    height: 6.25rem;
-}
 
-.social-logo {
-    padding: 0 1.4rem;
-    transition: all .2s ease;
-}
-    .social-logo:hover {
-        transform: scale(1.2);
-    }
+
+
+
+
+
+// Media Queries
+
 
 @media(max-width: 1350px) {
     /* Home Page CTA */
