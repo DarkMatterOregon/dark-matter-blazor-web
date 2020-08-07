@@ -19,7 +19,7 @@ app {
 }
 
   .main .top-row {
-      background-color: #000;
+      background-color: $black;
       justify-content: flex-end;
   }
 
@@ -75,12 +75,12 @@ app {
 
           .sidebar .nav-item a.active {
               background-color: rgba(255,255,255,0.25);
-              color: white;
+              color: $white;
           }
 
           .sidebar .nav-item a:hover {
               background-color: rgba(255,255,255,0.1);
-              color: white;
+              color: $white;
           }
 
 .content {
@@ -92,19 +92,19 @@ app {
 }
 
 .valid.modified:not([type=checkbox]) {
-  outline: 1px solid #26b050;
+  outline: 1px solid $green;
 }
 
 .invalid {
-  outline: 1px solid red;
+  outline: 1px solid $red;
 }
 
 .validation-message {
-  color: red;
+  color: $red;
 }
 
 #blazor-error-ui {
-  background: lightyellow;
+  background: $yellow;
   bottom: 0;
   box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
   display: none;
@@ -158,13 +158,13 @@ app {
 }
 
 .menu:not(.profile-menu) .navigation-item-link{
-  color: white;
+  color: $white;
   font-size: x-large;
 }
 
 .menu:not(.profile-menu) .navigation-item{
   border-right-width: 1px;
-  border-right-color: white;
+  border-right-color: $white;
 }
 
 div.linebar{
@@ -182,11 +182,11 @@ div.linebar{
   flex: 1;
   padding: 0rem;
   border-top: none;
-  background-color: #672E31;
+  background-color: $red;
 }
 
   .footer .bottom-row {
-      background-color: #672E31;
+      background-color: $red;
       justify-content: space-between;
   }
 
