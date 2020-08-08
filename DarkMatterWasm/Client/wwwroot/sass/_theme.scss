@@ -47,6 +47,10 @@ p {
   background-attachment: fixed;
   background-size: cover;
   padding: 2rem 0;
+
+  .bg-dark-trans {
+      min-width: 19rem;
+  }
 }
 
 // Home: Section 4
