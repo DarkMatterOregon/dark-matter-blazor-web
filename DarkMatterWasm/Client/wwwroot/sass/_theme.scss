@@ -101,21 +101,28 @@ p {
     background-position: top;
     background-attachment: fixed;
     background-size: cover; 
-    height: 15.5rem;
+    min-height: 15.5rem;
     padding-left: 6rem;
     padding-right: 6rem;
 }
 .crew-section-2 {
   padding: 2rem 0;
 
-  .crew-member-card {
-    align-self: center;
-    min-height: 15.5rem;
-    width: 15.5rem;
+  .crew-member-card {  
+    height: 25rem; 
     border: 2px solid #000;
     background-color: #fff;
-    padding: 1rem;
-    display: inline-block;
+    padding: 3rem;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 
     h2 {
       font-size: 1.6rem;
@@ -249,8 +256,8 @@ div.contact-us-send-button {
     }
     
     div.crew-member-card {
-        min-height: 15.5rem;
-        width: 20;
+        // min-height: 15.5rem;
+        // width: 20;
     }
 }
 
@@ -366,8 +373,8 @@ div.contact-us-send-button {
         }
     
             div.crew-member-card {
-                min-height: 15.5rem;
-                width: 15.5rem;
+                // min-height: 15.5rem;
+                // width: 15.5rem;
             }
 
     /*

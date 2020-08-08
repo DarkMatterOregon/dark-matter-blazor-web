@@ -20,12 +20,13 @@ else
 {
     <div class="crew-section-2">
         <div class="container">
-            @foreach (var crew in CrewMembers)
+            <div class="row mx-auto">
+                @foreach (var crew in CrewMembers)
                 {
-
-                            <Member CrewMember="@crew"/>
-
+                    <Member CrewMember="@crew"/>
                 }
+            </div>
+            
         </div>
     </div>
 

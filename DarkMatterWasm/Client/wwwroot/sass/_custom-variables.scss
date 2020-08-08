@@ -1,33 +1,33 @@
-// // Dark Matter Theme
+// // // Dark Matter Theme
 
-// DM Color system
-$blue:    #82A1B6;
-$red:     #672E31;
-$dark:          $black;
-$dark-trans:    rgba($black, 0.6);
+// // DM Color system
+// // $blue:    #82A1B6;
+// // $red:     #672E31;
+// // $dark:          $black;
+// // $dark-trans:    rgba($black, 0.6);
 
-$theme-colors: map-merge(
-  (
-    //eg. bg-dark-trans
-    "dark-trans":  $dark-trans
-  ),
-  $theme-colors
-);
+// $theme-colors: map-merge(
+//   (
+//     //eg. bg-dark-trans
+//     "dark-trans":  $dark-trans
+//   ),
+//   $theme-colors
+// );
 
 // DM Typgoraphy
-$font-family-sans-serif:      'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif:      'Courier New', Courier, monospace;
+// $font-family-sans-serif:      'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $font-family-serif:      'Courier New', Courier, monospace;
 
-$h1-font-size:                $font-size-base * 3;
-$h2-font-size:                $font-size-base * 3;
-$h3-font-size:                $font-size-base * 1.7;
+// $h1-font-size:                $font-size-base * 3;
+// $h2-font-size:                $font-size-base * 3;
+// $h3-font-size:                $font-size-base * 1.7;
 
-// DM Nav
-$nav-link-padding-y:                1.5rem;
+// // DM Nav
+// $nav-link-padding-y:                1.5rem;
 
 
 
-// // // // // // // // // // // // // // //
+// // // // // // // // // // // // // // // 
 
 
 
@@ -64,11 +64,11 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #82A1B6;
+$blue:    #82A1B6; 
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #672E31;
+$red:     #672E31 ;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
