@@ -106,11 +106,11 @@ p {
     padding-right: 6rem;
 }
 .crew-section-2 {
-  padding: 2rem 0;
+    padding: 2rem 0;
 
-  .row {
-      transform: translateY(-10rem); 
-  }
+    .row {
+        transform: translateY(-10rem); 
+    }
 
   .crew-member-card {  
     height: 25rem; 
@@ -123,6 +123,8 @@ p {
     flex-direction: column;
     justify-content: space-around;
     margin: 2rem 3rem;
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
+    min-width: 20rem;
 
     img {
         display: block;
