@@ -1,2 +1,2 @@
-﻿## We Love C# and .Net
+﻿### We Love C# and .Net
 Our founders started using .Net almost 20 years ago and have kept up with all the twists and turns along the way. Today we deploy C# running on Linux containers in the cloud and couldn’t be happier. Microsoft embracing open source was the best choice they ever made.
